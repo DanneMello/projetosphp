@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang = "pt-br">
 <head>
-   <title>Exemplo</title>
+   <title>Operadores lógicos e comandos de entradas com Php</title>
    <meta charset = "UTF-8">
 </head>
 <body>
@@ -10,15 +10,7 @@
       Digite seu sobrenome:</br> <input name="valor2" type="text"><br>
       <input type="submit" name="enviar" value="Enviar"> 
 </form>
-<!--   <form action="" method="post" >
-      Primeiro Numero: <input name="num1" type="text"><br>
-      Segundo numero: <input name="num2" type="text"><br>
-      <input type="submit" name="operacao" value="+">     
-      <input type="submit" name="operacao" value="-">     
-      <input type="submit" name="operacao" value="*">     
-      <input type="submit" name="operacao" value="/">        
-    </form> 
--->    
+
 <?php
 
 $val1 = $_POST["valor1"];
@@ -36,28 +28,6 @@ if( !empty($enviar) ) {
     echo "<h1>Ultimos valores digitados:</h1> ";
     echo "<h2>Valores digitados:  $val1 ". " " ."$val2 </h2>";
  }
-
-/*
-   $a = $_POST['num1'];
-   $b = $_POST['num2'];
-   $op= $_POST['operacao'];
-
-   
-   if( !empty($op) ) {
-      if($op == '+')
-         $c = $a + $b;
-      else if($op == '-')
-         $c = $a - $b;
-      else if($op == '*')
-         $c = $a*$b;
-      else
-         $c = $a/$b;
-
-      echo "O resultado da operação é: $c";
-
-   }
-*/
-
 ?>       
 </body>
 </html>

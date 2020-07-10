@@ -6,8 +6,8 @@
 </head>
 <body>
 <form action="" method="POST" >
-      Digite seu nome:</br> <input name="valor1" type="text"><br>
-      Digite seu sobrenome:</br> <input name="valor2" type="text"><br>
+      Digite o primeiro valor:</br> <input name="valor1" type="text"><br>
+      Digite o segundo valor:</br> <input name="valor2" type="text"><br>
       <input type="submit" name="enviar" value="Enviar"> 
 </form>
 

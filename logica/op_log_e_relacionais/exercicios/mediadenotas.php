@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo_IMC</title>
+</head>
+<body>
+<form action="" method="POST" >
+        Digite seu Nome:</br> <input name="nome" type="text"><br>
+        Digite sua nota 1:</br> <input name="nota1" type="text"><br>
+        Digite sua nota 2:</br> <input name="nota2" type="text"><br>
+        Digite sua nota 3:</br> <input name="nota3" type="text"><br>
+        Digite sua média: </br> <input name="media" type="text"><br>
+        <input type="submit" name="enviar" value="Enviar"> 
+    </form>
+<?php
+// @Pegando os valores informados pelo usuário via método POST
+    $nome = $_POST["nome"];
+    $nota1 = $_POST["nota1"];
+    $nota2 = $_POST["nota2"];
+    $nota3 = $_POST["nota3"];
+    $media = $_POST["media"];
+    $enviar = $_POST['enviar'];
+
+if( !empty($nota1) && is_numeric($nota1) && !empty($nota2) && is_numeric($nota2) && !empty($nota3) && is_numeric($nota3) && !empty($media) && is_numeric($media)) { // @Verificando se os dois campos estão preenchidos
+    $nota_final = ($nota1 + $nota2 + $nota3) / 3;
+
+    if($nota_final >= $media) {
+
+        echo "Parabéns $nome, sua média foi $nota_final e você foi aprovado com sucesso!! \o/";
+
+    } else {
+        echo "REPROVADO!! ficou com $nota_final ponto";
+        if($nota_final > 1) {
+            echo "s";
+        }
+    }
+
+} else {
+     echo "Digite um valor numérico para continuar: ";
+ }
+ ?>
+</body>
+</html>   

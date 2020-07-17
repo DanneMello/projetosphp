@@ -1,0 +1,23 @@
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color:royalblue;
+    border: 2px solid rgb(7, 108, 223);
+    padding: 3px;
+    text-align: center;
+  }
+
+  p {
+    color:darkviolet;
+    font-size: 120%;
+    text-align: center;
+  }
+
+  form {
+    color:darkviolet;
+    font-size: 120%;
+    border:3px solid rgb(34, 241, 7);
+    padding: 5px;
+    text-align: center;
+  }

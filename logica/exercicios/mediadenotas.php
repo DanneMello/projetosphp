@@ -26,12 +26,11 @@
 if( !empty($nota1) && is_numeric($nota1) && !empty($nota2) && is_numeric($nota2) && !empty($nota3) && is_numeric($nota3) && !empty($media) && is_numeric($media)) { // @Verificando se os dois campos estão preenchidos
     $nota_final = ($nota1 + $nota2 + $nota3) / 3;
     $nota_final = number_format($nota_final, 1); //@aqui estou usando a função do próprio PHP para estipular a quantidade de casa que quero mostrar após a virgula.
-
     if($nota_final >= $media) {
 
         echo "Parabéns $nome, sua média foi $nota_final e você foi aprovado com sucesso!! \o/";
 
-    } else if(($nota_final >= 50) && ($nota_final < 70)) {
+    } else if(($nota_final > $media/2) && ($nota_final < $media)) {
         echo "$nome, você PEGOU RECUPERAÇÃO!! ficou com $nota_final ponto";
             if($nota_final > 1) {
                 echo "s";

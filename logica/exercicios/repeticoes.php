@@ -29,13 +29,28 @@ if( !empty($count) && is_numeric($count) && // @Verificando se os dois campos es
     echo "O(a) $nome quer contar até $count, saltando de $salto em $salto. Numero de repetições é: $numSaltos" . "</br>";
     $i = 0;
     $soma = 0;
+    $maiorValor = 0;
+    $menorValor = 0;
     while ($i <$count) {
         $i = $i + $salto;
-        $soma = $soma + $i;
-        echo $i ;
-        echo "</br>\\";
+        $soma = $soma + $i; //@Atribuindo os valores na váriavel $soma a cada loop
+        echo $i ;  //@Printando o valor da váriavel $i a cada loop
+        echo "</br>";
+    }
+    if ($soma > $maiorValor ) { // @Aqui estou fazendo a verificação para saber qual é o maior valor
+
+        $maiorValor = $soma;
+    }
+
+    if ($soma < $menorValor) { // @Aqui estou fazendo a verificação para saber qual é o menor valor
+
+        $menorValor = $soma;
     }
     echo "<hr>" . "A soma de de todos os loops [$numSaltos] é igual a: ". $soma . ". </br> A cada loop será acrescentado o valor que ela estará valendo";
+    echo "<hr>";
+    echo "Maior valor é: $maiorValor </br>";
+    echo "Menor valor é: $menorValor </br>";
+
 
 } else {
      echo "Digite um valor numérico para continuar: "; // @Caso o usuário não digitar um valor numérico, esta menssagem irá aparecer.

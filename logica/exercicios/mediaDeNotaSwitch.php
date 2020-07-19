@@ -43,7 +43,7 @@ if( !empty($nota1) && is_numeric($nota1) && // @Verificando se os dois campos es
         case (($mediaDeNotas >=70) && ($mediaDeNotas <80));
             $conceito = 'C';
     break;
-        case (($mediaDeNotas >=70) && ($mediaDeNotas <=50));
+        case (($mediaDeNotas >=50) && ($mediaDeNotas <70));
             $conceito = 'D';
     break;
         case ($mediaDeNotas <50) ;

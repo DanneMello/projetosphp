@@ -28,11 +28,14 @@ if( !empty($count) && is_numeric($count) && // @Verificando se os dois campos es
     $numSaltos = $count / $salto;
     echo "O(a) $nome quer contar até $count, saltando de $salto em $salto. Numero de repetições é: $numSaltos" . "</br>";
     $i = 0;
+    $soma = 0;
     while ($i <$count) {
         $i = $i + $salto;
+        $soma = $soma + $i;
         echo $i ;
-        echo "<hr>\\";
+        echo "</br>\\";
     }
+    echo "<hr>" . "A soma de de todos os loops [$numSaltos] é igual a: ". $soma . ". </br> A cada loop será acrescentado o valor que ela estará valendo";
 
 } else {
      echo "Digite um valor numérico para continuar: "; // @Caso o usuário não digitar um valor numérico, esta menssagem irá aparecer.

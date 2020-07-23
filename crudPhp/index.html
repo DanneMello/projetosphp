@@ -1,53 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionário CRUD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Pesquisa</title>
 </head>
 <body>
-    <form method="POST" action="processo.php">
-        <h1>Pesquisa</h1>
-        <article>
-            <p>
-                <label>1.Qual sua faixa de Idade: </label><br/>
-                <input type="radio" name="perg1" value="a"/>a.	Até 30 Anos<br/>
-                <input type="radio" name="perg1" value="b" />b.	De 30 a 50 anos<br/>
-                <input type="radio" name="perg1" value="c" />c.	De 50 a 65 anos<br/>
-                <input type="radio" name="perg1" value="d" />d.	Acima de 65 anos<br/>
-            </p>
+    <h2>Responda nossa pesquisa</h2>
+    <form name="pesquisa" action="formulario.php" method="POST"> 
+        <label>Clique aqui </label>
+        <input type="submit" name="consulta" value="Iniciar" >
+        
 
-            <p>
-                <label>2.	Qual seu convênio: </label><br/>
-                <input type="radio" name="perg2" value="a"/>a.	INSS<br/>
-                <input type="radio" name="perg2" value="b" />b.	SIAPE<br/>
-                <input type="radio" name="perg2" value="c" />c.	Forças Armadas<br/>
-                <input type="radio" name="perg2" value="d" />d.	Outros<br/>
-            </p>
-
-            <p>
-                <label>3.	Qual sua faixa salarial:</label><br/>
-                <input type="radio" name="perg3" value="a"/>a.	Até 2 SM<br/>
-                <input type="radio" name="perg3" value="b" />b.	De 2 a 4 SM<br/>
-                <input type="radio" name="perg3" value="c" />c.	De 4 a 6 SM<br/>
-                <input type="radio" name="perg3" value="d" />d.	Acima de 6 SM<br/>
-            </p>
-
-            <p>
-                <label>4.	Por que você realizou o empréstimo:</label><br/>
-                <input type="radio" name="perg4" value="a"/>a.	Pagar contas<br/>
-                <input type="radio" name="perg4" value="b" />b.	Reforma da Casa<br/>
-                <input type="radio" name="perg4" value="c" />c.	Compra de Carro<br/>
-                <input type="radio" name="perg4" value="d" />d.	Outras de 65 anos<br/>
-            </p>
-        </article>
-        <input type="submit" value="Enviar Formulários">
     </form>
-    
+
 </body>
 </html>
-
-
-
-
-

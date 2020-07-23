@@ -33,7 +33,8 @@ include_once("conexao.php");
     foreach ($sql->fetchAll() as $row) {
         echo "Cliente = ".$n."</br>";
         echo " - Id : ". $row['id']."</br>";
-        echo " - Faixa etária : ". $row['faixaEtaria']."</br>";
+        echo " - Tipo de convênio : ". $row['faixaEtaria']."</br>";
+        echo " - Faixa etária : ". $row['tipoConvenio']."</br>";
         echo " - Faixa salarial : ". $row['faixaSalarial']."</br>";
         echo " - Motivo do empréstimo : ". $row['motEmprestimo']."</br>";
 
@@ -43,6 +44,28 @@ include_once("conexao.php");
 
 
 }
+
+
+/*
+ // Obtendo os dados por meio de um loop while
+ while ($registro = mysqli_fetch_array($resultado))
+ {
+    $Id = $registro['id'];
+    $Faixa_Etaria = $registro['faixaEtaria'];
+    $Tipo_Convenio = $registro['tipoConvenio'];
+    $Faixa_Salarial = $registro['faixaSalarial'];
+    $Motivo_Emprestimo = $registro['motEmprestimo'];
+    echo "<tr>";
+    echo "<td>".$Id."</td>";
+    echo "<td>".$Faixa_Etaria."</td>";
+    echo "<td>".$Tipo_Convenio."</td>";
+    echo "<td>".$Faixa_Salarial."</td>";
+    echo "<td>".$Motivo_Emprestimo."</td>";
+
+    echo "</tr>";
+ }
+
+*/
 
 
 ?>

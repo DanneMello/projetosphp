@@ -21,21 +21,19 @@ include_once("conexao.php");
         echo "usuário inserido com sucesso<hr>";
 
 //@Selecionando todos os dados da tabela clientes do meu BD
-    $sql = "SELECT COUNT(*) FROM clientes ";
+    $sql = "SELECT * FROM clientes ";
     $sql = $pdo->query($sql);
 
-
     if($sql->rowCount() > 0) {
-    
-    
+
         foreach($sql->fetchAll() as $cliente) {
             
             echo " Faixa etária: ".$cliente["faixaEtaria"]."</br>"." Tipo de convênio: ".$cliente["tipoConvenio"]."</br>"." Faixa salarial: ".$cliente["faixaSalarial"]."</br>"." Motivo do empréstimo: ".$cliente["motEmprestimo"]."</br>";
 
             echo "<hr><hr>";
-        }
-    
 
+
+        }
     } else {
         echo "Não há usuários cadastrados no banco<hr>";
     }

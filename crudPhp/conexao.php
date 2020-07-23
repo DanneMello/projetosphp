@@ -8,6 +8,7 @@ $dbpass = "";
 try {
     $pdo = new PDO($banco, $dbuser, $dbpass); // @Aqui estou usando as váriaveis por questão de uma melhor visualização do meu código.
 
+
 } catch(PDOException $e){
     echo "Conexão com o banco FALHOU:".$e->getMessage();
 

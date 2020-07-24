@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-07-24T20:23:47.740Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="LeT72xmgwHEL273tejZc" version="13.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-24T20:38:01.738Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="0M_LABL3sveAi6kyxRtr" version="13.5.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,16 +7,13 @@
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-0" target="6lG_LMzA8kCoMvOKwmpQ-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-48" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-0" target="6lG_LMzA8kCoMvOKwmpQ-42">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-0" value="Index.html&lt;br&gt;&amp;nbsp;Onde terá o botão INICIAR" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="115" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-44" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-1" target="6lG_LMzA8kCoMvOKwmpQ-43">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-49" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-1" target="6lG_LMzA8kCoMvOKwmpQ-42">
+        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-54" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=1;endArrow=classic;endFill=1;strokeColor=#1A1A1A;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-1" target="6lG_LMzA8kCoMvOKwmpQ-42">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-1" value="formulario.php&lt;br&gt;Cria um formulário em HTML através do PHP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -41,15 +38,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-14" value="processo.php&lt;br&gt;Processa as informações obtidas do BD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="515" y="340" width="120" height="70" as="geometry" />
+          <mxGeometry x="515" y="370" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-24" value="Data Base" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="790" y="400" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-41" value="Tela do usuário" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="40" y="10" width="100" height="100" as="geometry" />
+        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-52" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-41" target="6lG_LMzA8kCoMvOKwmpQ-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="280" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-46" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-42" target="6lG_LMzA8kCoMvOKwmpQ-41">
+        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-41" value="Tela do usuário" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="30" y="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-53" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=1;endArrow=block;endFill=1;strokeColor=#1A1A1A;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-42" target="6lG_LMzA8kCoMvOKwmpQ-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-42" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -60,8 +64,13 @@
             <mxPoint x="575" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-50" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;strokeColor=#1A1A1A;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-43" target="6lG_LMzA8kCoMvOKwmpQ-42">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6lG_LMzA8kCoMvOKwmpQ-61" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=1;strokeColor=#1A1A1A;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6lG_LMzA8kCoMvOKwmpQ-43" target="6lG_LMzA8kCoMvOKwmpQ-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="575" y="60" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="6lG_LMzA8kCoMvOKwmpQ-43" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="540" y="250" width="70" height="60" as="geometry" />

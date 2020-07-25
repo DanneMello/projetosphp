@@ -6,8 +6,6 @@ include_once("conexao.php");
     $perg3 = $_POST["perg3"];
     $perg4 = $_POST["perg4"];
 
-    $resultado = 0;
-
 // @Verificando se o questionário foi preenchido corretamente
     if(!isset($perg1) || !isset($perg2) || !isset($perg3) || !isset($perg4) ) {
         echo "Complete o questionário. :/ ";
@@ -21,7 +19,7 @@ include_once("conexao.php");
     // @Selecionando todos os dados da tabela clientes do meu BD
         $total = 0;
         $n = 0;
-        $sql = "SELECT * FROM clientes ";
+        $sql = "SELECT * FROM clientes  ";
         $sql = $pdo->query($sql);
         $total = $sql->rowCount(); // @Contando quantas listas tem na minha tabela
 
@@ -29,24 +27,43 @@ include_once("conexao.php");
 
     // @Buscando todos os dados da minha tabela e criando uma array "$row" 
         foreach ($sql->fetchAll() as $row) {
-            echo "Cliente = ".$n."</br>";
-            echo " - Id : ". $row['id']."</br>";
-            echo " - Tipo de convênio : ". $row['faixaEtaria']."</br>";
-            echo " - Faixa etária : ". $row['tipoConvenio']."</br>";
-            echo " - Faixa salarial : ". $row['faixaSalarial']."</br>";
-            echo " - Motivo do empréstimo : ". $row['motEmprestimo']."</br>";
 
-            echo "</br><hr>";
-            $n++;
+            $faixaEtaria = $row['faixaEtaria'];
+            $tipoConvenio = $row['tipoConvenio'];            
+            $faixaSalarial = $row['faixaSalarial'];
+            $motEmprestimo = $row['motEmprestimo'];
+
+            $optA =0;
+            $optB =0;
+            $optC =0;
+            $optD =0;
+
+                if($faixaEtaria == "a") {
+                    $optA ++;
+
+                } else if (($faixaEtaria)=="b") {
+                    $optB ++;
+    
+    
+                } else if (($faixaEtaria)=="c") {
+                    $optC ++;
+    
+    
+                } else {
+                    $optD ++;
+    
+                }
+           print_r($optA);
+            echo "<br>";
         }
-
+        echo "Qt de opções A: ".$optA."<br>";
 
 }
 
 
 /*
  // Obtendo os dados por meio de um loop while
- while ($dados = mysqli_fetch_array($sql))
+ while ($registro = mysqli_fetch_array($sql))
  {
     $Id = $registro['id'];
     $Faixa_Etaria = $registro['faixaEtaria'];

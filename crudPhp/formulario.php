@@ -1,8 +1,8 @@
 <?php
 
 // @Criando formulário HTML através do PHP
-echo "<form method='POST' action='processo.php'>";
-echo "<h1>Pesquisa</h1>";
+echo "<form method='POST' action='processo.php'>"; // @Aqui estou enviando meus dados através do método POST, para o arquivo "Formulário.php" que irá tratá-los
+echo "<h1>Pesquisa</h1>"; 
 echo "<article>";
 
 echo "<p>";

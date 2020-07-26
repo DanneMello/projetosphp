@@ -33,8 +33,8 @@ echo "<p>";
 echo "<label>1.Porquê realizou o empréstimo? </label><br/>";
 echo "<input type='radio' name='perg4' value='a' />a.	Pagar contas<br/>";
 echo "<input type='radio' name='perg4' value='b' />b.	Reforma da Casa<br/>";
-echo "<input type='radio' name='perg4' value='c' />c.	Compra de Carro<br/>";
-echo "<input type='radio' name='perg4' value='d' />d.	Outras de 65 anos<br/>";
+echo "<input type='radio' name='perg4' value='c' />c.	Aquisição de veículos<br/>";
+echo "<input type='radio' name='perg4' value='d' />d.	Outros<br/>";
 echo "</p>";
 
 echo "</article>";

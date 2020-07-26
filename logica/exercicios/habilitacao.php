@@ -7,10 +7,12 @@
 </head>
 <body>
 <form action="" method="POST" >
+
         Digite seu Nome:</br> <input name="nome" type="text"><br>
         Digite o ano em que nasceu:</br> <input name="ano_nasc" type="text"><br>
         Digite o ano que deseja tirar sua habilitação:</br> <input name="ano_atual" type="text"><br>
         <input type="submit" name="enviar" value="Enviar"> 
+
     </form>
 <?php
 // @Pegando os valores informados pelo usuário via método POST
@@ -26,8 +28,10 @@ if( !empty($ano_nasc) && is_numeric($ano_atual) ) { // @Verificando se os dois c
 
     if($maior_idade >= 18) {
         echo "Parabéns, sua idade é $idade e Já pode ir preso!! Também pode tirar sua Habilitação:";
+
     } else {
         echo "Então... Você só tem $idade anos e ainda não pode tirar sua Habilitação, falta $idade_q_falta ano";
+        
         if($idade_q_falta > 1) { // @Se for maior que um, vai add um "s" no final de "ano";
             echo "s";
         }

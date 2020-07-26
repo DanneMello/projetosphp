@@ -26,17 +26,19 @@ include_once("conexao.php");
         echo "O número de usuários cadastrados no meu Banco é: <b>". $total."</b><hr>";
 
     // @Buscando todos os dados da minha tabela e criando uma array "$row" 
-        foreach ($sql->fetchAll() as $row) {
+            $optA =0;
+            $optB =0;
+            $optC =0;
+            $optD =0;
+            
+            foreach ($sql->fetchAll() as $row) {
 
             $faixaEtaria = $row['faixaEtaria'];
             $tipoConvenio = $row['tipoConvenio'];            
             $faixaSalarial = $row['faixaSalarial'];
             $motEmprestimo = $row['motEmprestimo'];
 
-            $optA =0;
-            $optB =0;
-            $optC =0;
-            $optD =0;
+         
 
                 if($faixaEtaria == "a") {
                     $optA ++;

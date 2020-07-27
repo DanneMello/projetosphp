@@ -196,17 +196,21 @@ include_once("conexao.php");
             echo "<body bgcolor='#B0E0E6''> 
     
             <table width='1000' border='1px' style=' margin:auto; 
-            background: #40E0D0;
+            background: #7B68EE;
             position: absolute;
             top: 50%;
             left: 50%;
             margin-right: -50%;
             transform: translate(-50%, -50%)' >
         
-                <tr bgcolor='#A020F0'>
 
-                <tr>
-                <td height='40' COLSPAN='6' style=' text-align: center; font-size: 30px;'><b>FAIXA ETÁRIA</b></td>
+                <tr bgcolor=' #8A2BE2'>
+                <td height='40' COLSPAN='6' 
+                style=' text-align: center;
+                font-size: 30px;'>
+
+                    <b>FAIXA ETÁRIA</b></td>
+
                 </tr>
         
                 <td width='101' height='40' style=' text-align: center;'>TOTAL:</td>
@@ -218,8 +222,13 @@ include_once("conexao.php");
         
                 </tr>
         
-                <tr>
-                <td height='40' COLSPAN='6' style=' text-align: center; font-size: 30px;'><b>TIPO DO CONVÊNIO</b></td>
+                <tr bgcolor=' #8A2BE2'>
+                <td height='40' COLSPAN='6' 
+                style=' text-align: center; 
+                font-size: 30px;'>
+
+                <b>TIPO DO CONVÊNIO</b></td>
+
                 </tr>
         
                 <tr>
@@ -265,8 +274,13 @@ include_once("conexao.php");
                 
                 </tr>
         
-                <tr>
-                <td height='40' COLSPAN='6' style=' text-align: center; font-size: 30px;'><b>FAIXA SALARIAL</b></td>
+                <tr bgcolor=' #8A2BE2'>
+                <td height='40' COLSPAN='6' 
+                style=' text-align: center; 
+                font-size: 30px;'>
+                
+                <b>FAIXA SALARIAL</b></td>
+
                 </tr>
         
                 <tr>
@@ -313,8 +327,13 @@ include_once("conexao.php");
         
                 </tr>
         
-                <tr>
-                <td height='40' COLSPAN='6' style=' text-align: center; font-size: 30px;'> <b>MOTIVO DO EMPRÉSTIMO</b> </td>
+                <tr bgcolor=' #8A2BE2'>
+                <td height='40' COLSPAN='6' 
+                style=' text-align: center; 
+                font-size: 30px;'> 
+                
+                <b>MOTIVO DO EMPRÉSTIMO</b> </td>
+                
                 </tr>
         
                 <tr>

@@ -4,18 +4,17 @@ body {
 
 
 h2 {
-    color:darkviolet;
+    color: #A020F0;
     text-align: center;
   }
 
 
 form {
-    width: 200px;
+    width: 200px; 
     margin: auto;
     top: auto;
     left: auto;
     background-color: rgb(228, 213, 12);
-    color:rgb(67, 9, 183);
     font-size: 150%;
     border:5px solid rgb(34, 241, 7);
     padding: 5px 5px;

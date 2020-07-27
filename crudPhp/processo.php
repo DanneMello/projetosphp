@@ -214,7 +214,7 @@ include_once("conexao.php");
                 </tr>
         
                 <td width='101' height='40' style=' text-align: center;'>TOTAL:</td>
-                <td width='113' bgcolor=' #4Bff82' style=' text-align: center; font-size: 35px;'> <b> " . $total . "</b></td>
+                <td width='113' bgcolor=' #FF4500' style=' text-align: center; font-size: 35px;'> <b> " . $total . "</b></td>
                 <td width='140' style=' text-align: center; font-size: 20px;'>ATÉ 30: " . number_format($Qt_FxE_A, 2) . "%</td>
                 <td width='85'  style=' text-align: center; font-size: 20px;'>DE 30 A 50: " .number_format($Qt_FxE_B, 2). "%</td>
                 <td width='140' style=' text-align: center; font-size: 20px;'>DE 50 A 65: ".number_format($Qt_FxE_C, 2)."%</td>
@@ -333,7 +333,7 @@ include_once("conexao.php");
                 font-size: 30px;'> 
                 
                 <b>MOTIVO DO EMPRÉSTIMO</b> </td>
-                
+
                 </tr>
         
                 <tr>

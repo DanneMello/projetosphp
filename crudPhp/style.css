@@ -1,10 +1,16 @@
 body {
-    background-color: powderblue;
+    background-color: #a000fc;
+    width: 200px; 
+    margin: auto;
+    top: auto;
+    left: auto;
+
+
   }
 
 
 h2 {
-    color: #A020F0;
+    color: #360830;
     text-align: center;
   }
 
@@ -19,4 +25,11 @@ form {
     border:5px solid rgb(34, 241, 7);
     padding: 5px 5px;
     text-align: center;
+  }
+
+tr {
+
+    color: #200716;
+    text-align: center;
+
   }

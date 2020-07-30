@@ -1,5 +1,5 @@
 <?php
-$json = file_get_contents("https://api.hgbrasil.com/weather");
+$json = file_get_contents("https://swapi.dev/api/pessoas/1");
 $json = json_decode($json);
 
 // Array com array multidimensional
@@ -11,3 +11,4 @@ print_r ($array);
 echo "<br/>";
 //var_dump($array["a"]);
 ?>
+

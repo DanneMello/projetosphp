@@ -17,7 +17,7 @@ if(isset($enviar) && is_numeric($tabuada) ) { // @Verificando se os dois campos 
             margin:auto;
             height: 50px;
             width: 390; 
-            border: 1px;
+            border: 5px;
             background: #00FF00;
             position: auto;
             text-align: center;
@@ -25,7 +25,7 @@ if(isset($enviar) && is_numeric($tabuada) ) { // @Verificando se os dois campos 
             transform: translate(-50%, -50%)' >
 
             <tr>
-                <td><b>TABUADA ESCOLHIDA PELO <b> $nome </b>FOI: <td  bgcolor='#1E90FF' width='40'> $tabuada </td></td>            
+                <td><b>TABUADA ESCOLHIDA PELO(a) <b> $nome </b>FOI:  $tabuada </td>            
             </tr>  
                        
         </table> ";

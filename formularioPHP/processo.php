@@ -9,7 +9,6 @@
 
 <body>
 
-
     <?php
 // @Pegando tos os valores digitado através do navegador pelo usuário
 include_once("conexao.php");
@@ -594,10 +593,10 @@ include_once("conexao.php");
                 <tr>
                     <td width='101' height='40'><b>TOTAL:</b></td>
                     <td width='113' bgcolor=' #FF4500' style=' text-align: center; font-size: 35px;'> <b> " . $total . "</b></td>
-                    <td width='140' style=' text-align: center; font-size: 20px;'>ATÉ 30: " . number_format($Qt_FxE_A, ) . "</td>
-                    <td width='85'  style=' text-align: center; font-size: 20px;'>DE 30 A 50: " .number_format($Qt_FxE_B, ). "</td>
-                    <td width='140' style=' text-align: center; font-size: 20px;'>DE 50 A 65: ".number_format($Qt_FxE_C, )."</td>
-                    <td width='85'  style=' text-align: center; font-size: 20px;'>ACIMA DE 65: ".number_format($Qt_FxE_D, )."</td>       
+                    <td width='140' style=' text-align: center; font-size: 20px;'>ATÉ 30: " . number_format($Qt_FxE_A, 2) . "%</td>
+                    <td width='85'  style=' text-align: center; font-size: 20px;'>DE 30 A 50: " .number_format($Qt_FxE_B, 2). "%</td>
+                    <td width='140' style=' text-align: center; font-size: 20px;'>DE 50 A 65: ".number_format($Qt_FxE_C, 2)."%</td>
+                    <td width='85'  style=' text-align: center; font-size: 20px;'>ACIMA DE 65: ".number_format($Qt_FxE_D, 2)."%</td>       
                 </tr>
         
                 <tr bgcolor=' #4F4F4F'>

@@ -1,0 +1,22 @@
+body {
+    background-color: powderblue;
+  }
+
+  form {
+    width: 700px;
+    color:#0015ff;
+    font-size: 200%;
+    border:3px solid #A020F0;
+    padding: 5px;
+    text-align: center;
+    background: #04f30c;
+    height: auto; 
+    margin: auto;
+    top: auto;
+    left: auto;
+  }
+
+h1 {
+    color: red;
+    text-align: center;
+}

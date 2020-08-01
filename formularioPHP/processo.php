@@ -135,298 +135,298 @@ include_once("conexao.php");
             foreach ($sql->fetchAll() as $row) {
 
 // @Atribuindo ás váriaveis abaixo os valores de cada coluna salvas no BD
-            $id = $row['id'];
-            $faixaEtaria = $row['faixaEtaria'];
-            $tipoConvenio = $row['tipoConvenio'];            
-            $faixaSalarial = $row['faixaSalarial'];
-            $motEmprestimo = $row['motEmprestimo'];
+                $id = $row['id'];
+                $faixaEtaria = $row['faixaEtaria'];
+                $tipoConvenio = $row['tipoConvenio'];            
+                $faixaSalarial = $row['faixaSalarial'];
+                $motEmprestimo = $row['motEmprestimo'];
 
 
 // @Atribuindo valores para cada váriavel de acordo com o resultado salvo nas váriaveis que estão armazenando os valores das colunas da tabela "clientes".
-                if( $faixaEtaria == "a" ) {
+                    if( $faixaEtaria == "a" ) {
 
-                    $Qt_FxE_A ++;
+                        $Qt_FxE_A ++;
 
-                        } else if ( $faixaEtaria == "b" ) {
+                            } else if ( $faixaEtaria == "b" ) {
 
-                            $Qt_FxE_B ++;
-        
-                                } else if (  $faixaEtaria  == "c" ) {
+                                $Qt_FxE_B ++;
+            
+                                    } else if (  $faixaEtaria  == "c" ) {
 
-                                    $Qt_FxE_C ++;
+                                        $Qt_FxE_C ++;
+
+                                            } else {
+
+                                                $Qt_FxE_D ++;    
+                    }
+
+                    
+                    if( $tipoConvenio == "a" ) {
+
+                        $Qt_TiConv_A ++;
+
+                            } else if ( $tipoConvenio == "b" ) {
+
+                                $Qt_TiConv_B ++;
+            
+                                    } else if ( $tipoConvenio =="c" ) {
+
+                                        $Qt_TiConv_C ++;
+
+                                            } else {
+
+                                                $Qt_TiConv_D ++;    
+                    }
+
+
+                    if( $faixaSalarial == "a" ) {
+
+                        $Qt_FxS_A ++;
+
+                            } else if ( $faixaSalarial == "b" ) {
+
+                                $Qt_FxS_B ++;
+            
+                                    } else if ( $faixaSalarial =="c" ) {
+
+                                        $Qt_FxS_C ++;
+
+                                            } else {
+
+                                                $Qt_FxS_D ++;    
+                    }
+
+
+                    if( $motEmprestimo == "a" ) {
+
+                        $Qt_MotEmp_A ++;
+
+                            } else if ( $motEmprestimo == "b" ) {
+
+                                $Qt_MotEmp_B ++;
+            
+                                    } else if ( $motEmprestimo =="c" ) {
+
+                                        $Qt_MotEmp_C ++;
+
+                                            } else {
+
+                                                $Qt_MotEmp_D ++;    
+                    }
+
+    // @Aqui estou comparando o TIPO DO CONVÊNIO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
+
+                if( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $inss_Ate30 ++;
+
+                        } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $inss_30_A_50 ++;
+
+                                } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $inss_50_A_65 ++;
 
                                         } else {
 
-                                            $Qt_FxE_D ++;    
+                                            $inss_Acima_65 ++;    
                 }
+
+
+                if( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $siape_Ate30 ++;
+
+                        } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $siape_30_A_50 ++;
+
+                                } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $siape_50_A_65 ++;
+
+                                        } else {
+
+                                            $siape_Acima_65 ++;    
+                }
+
+                if( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $FA_Ate30 ++;
+
+                        } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $FA_30_A_50 ++;
+
+                                } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $FA_50_A_65 ++;
+
+                                        } else {
+
+                                            $FA_Acima_65 ++;    
+                }
+
+                if( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $outros_Ate30 ++;
+
+                        } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $outros_30_A_50 ++;
+
+                                } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $outros_50_A_65 ++;
+
+                                        } else {
+
+                                            $outros_Acima_65 ++;    
+                }
+
+
+    // @Aqui estou comparando a faixa salarial para cada faixa etária e atribuindo o valor á uma váriavel contadora.
 
                 
-                if( $tipoConvenio == "a" ) {
+                if( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $ate_2_SM_Ate30 ++;
 
-                    $Qt_TiConv_A ++;
+                        } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "b" ) ) {
 
-                        } else if ( $tipoConvenio == "b" ) {
+                            $ate_2_SM_De_30_A_50 ++;
 
-                            $Qt_TiConv_B ++;
-        
-                                } else if ( $tipoConvenio =="c" ) {
+                                } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "c" ) ) {
 
-                                    $Qt_TiConv_C ++;
-
-                                        } else {
-
-                                            $Qt_TiConv_D ++;    
-                }
-
-
-                if( $faixaSalarial == "a" ) {
-
-                    $Qt_FxS_A ++;
-
-                        } else if ( $faixaSalarial == "b" ) {
-
-                            $Qt_FxS_B ++;
-        
-                                } else if ( $faixaSalarial =="c" ) {
-
-                                    $Qt_FxS_C ++;
+                                    $ate_2_SM_De_50_A_65 ++;
 
                                         } else {
 
-                                            $Qt_FxS_D ++;    
+                                            $ate_2_SM_Acima_65 ++;    
                 }
 
+                if( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $de_2_A_4_SM_Ate_30 ++;
 
-                if( $motEmprestimo == "a" ) {
+                        } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "b" ) ) {
 
-                    $Qt_MotEmp_A ++;
+                            $de_2_A_4_SM_De_30_A_50 ++;
 
-                        } else if ( $motEmprestimo == "b" ) {
+                                } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "c" ) ) {
 
-                            $Qt_MotEmp_B ++;
-        
-                                } else if ( $motEmprestimo =="c" ) {
-
-                                    $Qt_MotEmp_C ++;
+                                    $de_2_A_4_SM_De_50_A_65 ++;
 
                                         } else {
 
-                                            $Qt_MotEmp_D ++;    
+                                            $de_2_A_4_SM_Acima_65 ++;    
                 }
 
-// @Aqui estou comparando o TIPO DO CONVÊNIO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
+                if( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $de_4_A_6_SM_Ate_30 ++;
 
-            if( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $inss_Ate30 ++;
+                        } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "b" ) ) {
 
-                    } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "b" ) ) {
+                            $de_4_A_6_SM_De_30_A_50 ++;
 
-                        $inss_30_A_50 ++;
+                                } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "c" ) ) {
 
-                            } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "c" ) ) {
+                                    $de_4_A_6_SM_De_50_A_65 ++;
 
-                                $inss_50_A_65 ++;
+                                        } else {
 
-                                    } else {
+                                            $de_4_A_6_SM_Acima_65 ++;    
+                }
 
-                                        $inss_Acima_65 ++;    
-            }
+                if( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $acima_6_SM_Ate_30 ++;
+    
+                        } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "b" ) ) {
 
+                            $acima_6_SM_De_30_A_50 ++;
 
-            if( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $siape_Ate30 ++;
+                                } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "c" ) ) {
 
-                    } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "b" ) ) {
+                                    $acima_6_SM_De_50_A_65 ++;
 
-                        $siape_30_A_50 ++;
+                                        } else {
 
-                            } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "c" ) ) {
+                                            $acima_6_SM_Acima_65 ++;    
+                }
 
-                                $siape_50_A_65 ++;
 
-                                    } else {
+    // @Aqui estou comparando o MOTIVO DO EMPRÉSTIMO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
 
-                                        $siape_Acima_65 ++;    
-            }
+                if( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $pagar_Conta_Ate30 ++;
 
-            if( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $FA_Ate30 ++;
+                        } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "b" ) ) {
 
-                    } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "b" ) ) {
+                            $pagar_Conta_De_30_A_50 ++;
 
-                        $FA_30_A_50 ++;
+                                } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "c" ) ) {
 
-                            } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "c" ) ) {
+                                    $pagar_Conta_De_50_A_65 ++;
 
-                                $FA_50_A_65 ++;
+                                        } else {
 
-                                    } else {
+                                            $pagar_Conta_Acima_65 ++;    
+                }
 
-                                        $FA_Acima_65 ++;    
-            }
+                if( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $reforma_Casa_Ate_30 ++;
 
-            if( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $outros_Ate30 ++;
+                        } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "b" ) ) {
 
-                    } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "b" ) ) {
+                            $reforma_Casa_De_30_A_50 ++;
 
-                        $outros_30_A_50 ++;
+                                } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "c" ) ) {
 
-                            } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "c" ) ) {
+                                    $reforma_Casa_De_50_A_65 ++;
 
-                                $outros_50_A_65 ++;
+                                        } else {
 
-                                    } else {
+                                            $reforma_Casa_Acima_65 ++;    
+                }
 
-                                        $outros_Acima_65 ++;    
-            }
+                if( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $Aq_Veiculo_Ate_30 ++;
 
+                        } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "b" ) ) {
 
-// @Aqui estou comparando a faixa salarial para cada faixa etária e atribuindo o valor á uma váriavel contadora.
+                            $Aq_Veiculo_De_30_A_50 ++;
 
-            
-            if( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $ate_2_SM_Ate30 ++;
+                                } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "c" ) ) {
 
-                    } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "b" ) ) {
+                                    $Aq_Veiculo_De_50_A_65 ++;
 
-                        $ate_2_SM_De_30_A_50 ++;
+                                        } else {
 
-                            } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "c" ) ) {
+                                            $Aq_Veiculo_Acima_65 ++;    
+                }
 
-                                $ate_2_SM_De_50_A_65 ++;
+                if( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $outro_Mot_Emp_Ate_30 ++;
 
-                                    } else {
+                        } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "b" ) ) {
 
-                                        $ate_2_SM_Acima_65 ++;    
-            }
+                            $outro_Mot_Emp_De_30_A_50 ++;
 
-            if( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $de_2_A_4_SM_Ate_30 ++;
+                                } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "c" ) ) {
 
-                    } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "b" ) ) {
+                                    $outro_Mot_Emp_De_50_A_65 ++;
 
-                        $de_2_A_4_SM_De_30_A_50 ++;
+                                        } else {
 
-                            } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $de_2_A_4_SM_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $de_2_A_4_SM_Acima_65 ++;    
-            }
-
-            if( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $de_4_A_6_SM_Ate_30 ++;
-
-                    } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $de_4_A_6_SM_De_30_A_50 ++;
-
-                            } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $de_4_A_6_SM_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $de_4_A_6_SM_Acima_65 ++;    
-            }
-
-            if( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $acima_6_SM_Ate_30 ++;
-  
-                    } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $acima_6_SM_De_30_A_50 ++;
-
-                            } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $acima_6_SM_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $acima_6_SM_Acima_65 ++;    
-            }
-
-
-// @Aqui estou comparando o MOTIVO DO EMPRÉSTIMO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
-
-            if( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $pagar_Conta_Ate30 ++;
-
-                    } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $pagar_Conta_De_30_A_50 ++;
-
-                            } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $pagar_Conta_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $pagar_Conta_Acima_65 ++;    
-            }
-
-            if( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $reforma_Casa_Ate_30 ++;
-
-                    } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $reforma_Casa_De_30_A_50 ++;
-
-                            } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $reforma_Casa_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $reforma_Casa_Acima_65 ++;    
-            }
-
-            if( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $Aq_Veiculo_Ate_30 ++;
-
-                    } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $Aq_Veiculo_De_30_A_50 ++;
-
-                            } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $Aq_Veiculo_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $Aq_Veiculo_Acima_65 ++;    
-            }
-
-            if( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                    
-                $outro_Mot_Emp_Ate_30 ++;
-
-                    } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "b" ) ) {
-
-                        $outro_Mot_Emp_De_30_A_50 ++;
-
-                            } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "c" ) ) {
-
-                                $outro_Mot_Emp_De_50_A_65 ++;
-
-                                    } else {
-
-                                        $outro_Mot_Emp_Acima_65 ++;    
-            }
+                                            $outro_Mot_Emp_Acima_65 ++;    
+                }
 
 
         }
@@ -521,45 +521,7 @@ include_once("conexao.php");
         $Qt_MotEmp_B = ($Qt_MotEmp_B / $total) * 100;  // REFORMA CASA
         $Qt_MotEmp_C = ($Qt_MotEmp_C / $total) * 100;  // AQUISIÇÃO VEÍCULO
         $Qt_MotEmp_D = ($Qt_MotEmp_D / $total) * 100;  // OUTROS
-
-
-
-
-/*
-        echo " <h2 style='color: #A020F0 ; text-align: center;' > TOTAL DE PESQUISAS REALIZADAS: </h2>" . " <h1 style='color: #4B0082 ;text-align: center;'> $total </h1> <hr>";
-
-            echo "<h2>FAIXA ETÁRIA</h2>";
-            echo "<b>ATÉ 30 ANOS:</b>  ".number_format($Qt_FxE_A,)."%</br>";       
-            echo "<b>DE 30 A 50 ANOS:</b>  ".number_format($Qt_FxE_B, 2)."%</br>";
-            echo "<b>DE 50 A 65 ANOS:</b>  ".number_format($Qt_FxE_C, 2)."%</br>";
-            echo "<b>ACIMA DE 65 ANOS:</b>  ".number_format($Qt_FxE_D, 2)."%<hr></br>";
-
-            echo "<h2>TIPO DO CONVÊNIO</h2>";
-            echo "<b> INSS:</b>  ".number_format($Qt_TiConv_A, 2)."%</br>";
-            echo "<b>SIAPE:</b>  ".number_format($Qt_TiConv_B, 2)."%</br>";
-            echo "<b> FORÇAS ARMADAS:</b>  ".number_format($Qt_TiConv_C, 2)."%</br>";
-            echo "<b>OUTROS:</b>  ".number_format($Qt_TiConv_D, 2)."%<hr></br>";
-
-            echo "<h2>FAIXA SALARIAL</h2>";
-            echo "<b>ATÉ 2 SALÁRIOS MÍNIMOS:</b>  ".number_format($Qt_FxS_A, 2)."%</br>";
-            echo "<b> DE 2 A 4 SALÁRIOS MÍNIMOS:</b>  ".number_format($Qt_FxS_B, 2)."%</br>";
-            echo "<b>DE 4 A 6 SÁLARIOS MÍNIMOS:</b>  ".number_format($Qt_FxS_C, 2)."%</br>";
-            echo "<b>ACIMA DE 6 SÁLARIOS MÍNIMOS:</b>  ".number_format($Qt_FxS_D, 2)."%<hr></br>";
-
-            echo "<h2>MOTIVO DO EMPRÉSTIMO</h2>";
-            echo "<b>PAGAR CONTAS:</b>  ".number_format($Qt_MotEmp_A, 2)."%</br>";
-            echo "<b>REFORMA DA CASA:</b>  ".number_format($Qt_MotEmp_B, 2)."%</br>";
-            echo "<b>AQUISIÇÃO DE VEÍCULO:</b>  ".number_format($Qt_MotEmp_C, 2)."%</br>";
-            echo "<b>OUTROS:</b>  ".number_format($Qt_MotEmp_D, 2)."%<hr></br>";
-
-            echo "<h2>VOCÊ ESCOLHEU AS SEGUINTES OPÇÕES: </h2>";
-            echo "<b>SEU ID É:</b>  ".$id."</br>";
-            echo "<b>FAIXA ETÁRIA:</b>  ".$faixaEtaria."</br>";
-            echo "<b>TIPO CONVÊNIO:</b>  ".$tipoConvenio."</br>";
-            echo "<b>FAIXA SALARIAL:</b>  ".$faixaSalarial."</br>";
-            echo "<b>MOTIVO DO EMPRÉSTIMO:</b>  ".$motEmprestimo."</br>";
-
-*/         
+      
         echo "
             <table width='1000' border='1px' style=' margin:auto; 
             background: #1E90FF;

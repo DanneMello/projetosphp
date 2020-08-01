@@ -1,7 +1,8 @@
 <?php
-// @Pegando tos os valores digitado através do navegador pelo usuário
+// @Incluindo o arquivo onde é responsavel pela conexão com o DB
 include_once("conexao.php");
 
+// @Pegando tos os valores digitado através do navegador pelo usuário
 $nome = $_POST["nome"];
 $sexo = $_POST["tipoSexo"];
 $anoNasc = $_POST["anoNasc"];
@@ -11,20 +12,20 @@ $enviar = $_POST['enviar'];
 // @Função para calcular a idade da pessoa com os dados obtidos do meu DB
 function idade ($anoNasc) {
         $anoNasc = new DateTime($anoNasc);
-        $dataAtual = new DateTime();
-
-        $idade = $dataAtual->diff($anoNasc);
-        return $idade->y;
+                $dataAtual = new DateTime();
+                        $idade = $dataAtual->diff($anoNasc);
+                                return $idade->y;
 }
 
 $idade = idade($anoNasc); // @Atribuindo a variavel $idade o resultado retornado pela funão idade.
 
-        // @Verificando se o questionário foi preenchido corretamente
+// @Verificando se o questionário foi preenchido corretamente
         if(!isset($nome) || !isset($sexo) || !isset($anoNasc) || !isset($corCabelo) ) {
 
                 echo "Complete o questionário. :/ ";
 
         } else {
+
                 echo "Nome: " . $nome . "</br>";
                 echo "Sexo: " . $sexo . "</br>";
                 echo  "Idade: ". $idade. "</br>";
@@ -40,9 +41,7 @@ $idade = idade($anoNasc); // @Atribuindo a variavel $idade o resultado retornado
                 $sql = $pdo->query($sql);
                 $total = $sql->rowCount(); // @Contando quantas listas tem na minha tabela
 
-
-                echo "Número atual de pessoas salvas no meu banco: $total<hr>";
-
+// @Inicializando as váriaveis que irei armazenar os dados 
                 $masc_maior_18_cabelo_preto = 0;
                 $fem_entre_25_e_30_loira = 0;
                 $outra_categoria = 0;
@@ -64,10 +63,14 @@ $idade = idade($anoNasc); // @Atribuindo a variavel $idade o resultado retornado
                                                         $outra_categoria ++;
                                                                 
                         }
+
                 }
-                        echo "Existem $masc_maior_18_cabelo_preto homem(ns), com idade maior que 18 anos e com cabelo preto  </br>";
-                        echo "Existem $fem_entre_25_e_30_loira mulher(es), com idade entre 25 e 30 anos e com cabelo loiro  </br>";
-                        echo "Existem $outra_categoria, que não se encaixam nos requisitos  </br>";
+
+                        echo "Número atual de pessoas salvas no meu banco: $total<hr>";
+                                echo "Existem $masc_maior_18_cabelo_preto homem(ns), com idade maior que 18 anos e com cabelo preto  </br>";
+                                        echo "Existem $fem_entre_25_e_30_loira mulher(es), com idade entre 25 e 30 anos e com cabelo loiro  </br>";
+                                                echo "Existem $outra_categoria, que não se encaixam nos requisitos  </br>";
+                                                        echo "Número atual de pessoas salvas no meu banco: $total<hr>";
 
         }
 ?>

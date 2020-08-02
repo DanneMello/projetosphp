@@ -52,5 +52,12 @@ if(!isset($nome) || !isset($valor) || !isset($email) ) {
                 echo "</br>a soma dos números IMPARES digitados é: $somaImpar";
                     echo "</br>a soma dos números PARES digitados é: $somaPar";
 
+        echo "<h1>Abaixo só mostrando um loop utilizando laço de repetições aninhados</h1>";
+
+            for($count1=1; $count1<=3; $count1++){
+                for($count2=1; $count2<=3; $count2++) {
+                    echo "$count1 $count2</br>";
+                }
+            }
 }
 ?>

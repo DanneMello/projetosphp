@@ -130,285 +130,285 @@ include_once("conexao.php");
                 $motEmprestimo = $row['motEmprestimo'];
 
 // @Atribuindo valores para cada váriavel de acordo com o resultado salvo nas váriaveis que estão armazenando os valores das colunas da tabela "clientes".
-                    if( $faixaEtaria == "a" ) {
+                if( $faixaEtaria == "a" ) {
 
-                        $Qt_FxE_A ++;
+                    $Qt_FxE_A ++;
 
-                            } else if ( $faixaEtaria == "b" ) {
+                        } else if ( $faixaEtaria == "b" ) {
 
-                                $Qt_FxE_B ++;
-            
-                                    } else if (  $faixaEtaria  == "c" ) {
+                            $Qt_FxE_B ++;
+        
+                                } else if (  $faixaEtaria  == "c" ) {
 
-                                        $Qt_FxE_C ++;
+                                    $Qt_FxE_C ++;
 
-                                            } else {
+                                        } else {
 
-                                                $Qt_FxE_D ++;    
-                    }
+                                            $Qt_FxE_D ++;    
+                }
 
-                    
-                    if( $tipoConvenio == "a" ) {
+                
+                if( $tipoConvenio == "a" ) {
 
-                        $Qt_TiConv_A ++;
+                    $Qt_TiConv_A ++;
 
-                            } else if ( $tipoConvenio == "b" ) {
+                        } else if ( $tipoConvenio == "b" ) {
 
-                                $Qt_TiConv_B ++;
-            
-                                    } else if ( $tipoConvenio =="c" ) {
+                            $Qt_TiConv_B ++;
+        
+                                } else if ( $tipoConvenio =="c" ) {
 
-                                        $Qt_TiConv_C ++;
+                                    $Qt_TiConv_C ++;
 
-                                            } else {
+                                        } else {
 
-                                                $Qt_TiConv_D ++;    
-                    }
-
-
-                    if( $faixaSalarial == "a" ) {
-
-                        $Qt_FxS_A ++;
-
-                            } else if ( $faixaSalarial == "b" ) {
-
-                                $Qt_FxS_B ++;
-            
-                                    } else if ( $faixaSalarial =="c" ) {
-
-                                        $Qt_FxS_C ++;
-
-                                            } else {
-
-                                                $Qt_FxS_D ++;    
-                    }
+                                            $Qt_TiConv_D ++;    
+                }
 
 
-                    if( $motEmprestimo == "a" ) {
+                if( $faixaSalarial == "a" ) {
 
-                        $Qt_MotEmp_A ++;
+                    $Qt_FxS_A ++;
 
-                            } else if ( $motEmprestimo == "b" ) {
+                        } else if ( $faixaSalarial == "b" ) {
 
-                                $Qt_MotEmp_B ++;
-            
-                                    } else if ( $motEmprestimo =="c" ) {
+                            $Qt_FxS_B ++;
+        
+                                } else if ( $faixaSalarial =="c" ) {
 
-                                        $Qt_MotEmp_C ++;
+                                    $Qt_FxS_C ++;
 
-                                            } else {
+                                        } else {
 
-                                                $Qt_MotEmp_D ++;    
-                    }
+                                            $Qt_FxS_D ++;    
+                }
+
+
+                if( $motEmprestimo == "a" ) {
+
+                    $Qt_MotEmp_A ++;
+
+                        } else if ( $motEmprestimo == "b" ) {
+
+                            $Qt_MotEmp_B ++;
+        
+                                } else if ( $motEmprestimo =="c" ) {
+
+                                    $Qt_MotEmp_C ++;
+
+                                        } else {
+
+                                            $Qt_MotEmp_D ++;    
+                }
 
 // @Aqui estou comparando o TIPO DO CONVÊNIO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
-                    if( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $inss_Ate30 ++;
+                if( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $inss_Ate30 ++;
 
-                            } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $inss_30_A_50 ++;
+                            $inss_30_A_50 ++;
 
-                                    } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $tipoConvenio == "a" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $inss_50_A_65 ++;
+                                    $inss_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $inss_Acima_65 ++;    
-                    }
-
-
-                    if( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $siape_Ate30 ++;
-
-                            } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "b" ) ) {
-
-                                $siape_30_A_50 ++;
-
-                                    } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "c" ) ) {
-
-                                        $siape_50_A_65 ++;
-
-                                            } else {
-
-                                                $siape_Acima_65 ++;    
-                    }
-
-                    if( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $FA_Ate30 ++;
-
-                            } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "b" ) ) {
-
-                                $FA_30_A_50 ++;
-
-                                    } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "c" ) ) {
-
-                                        $FA_50_A_65 ++;
-
-                                            } else {
-
-                                                $FA_Acima_65 ++;    
-                    }
-
-                    if( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $outros_Ate30 ++;
-
-                            } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "b" ) ) {
-
-                                $outros_30_A_50 ++;
-
-                                    } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "c" ) ) {
-
-                                        $outros_50_A_65 ++;
-
-                                            } else {
-
-                                                $outros_Acima_65 ++;    
-                    }
+                                            $inss_Acima_65 ++;    
+                }
 
 
-    // @Aqui estou comparando a faixa salarial para cada faixa etária e atribuindo o valor á uma váriavel contadora.                 
-                    if( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $ate_2_SM_Ate30 ++;
+                if( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $siape_Ate30 ++;
 
-                            } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $ate_2_SM_De_30_A_50 ++;
+                            $siape_30_A_50 ++;
 
-                                    } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $tipoConvenio == "b" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $ate_2_SM_De_50_A_65 ++;
+                                    $siape_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $ate_2_SM_Acima_65 ++;    
-                    }
+                                            $siape_Acima_65 ++;    
+                }
 
-                    if( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $de_2_A_4_SM_Ate_30 ++;
+                if( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $FA_Ate30 ++;
 
-                            } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $de_2_A_4_SM_De_30_A_50 ++;
+                            $FA_30_A_50 ++;
 
-                                    } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $tipoConvenio == "c" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $de_2_A_4_SM_De_50_A_65 ++;
+                                    $FA_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $de_2_A_4_SM_Acima_65 ++;    
-                    }
+                                            $FA_Acima_65 ++;    
+                }
 
-                    if( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $de_4_A_6_SM_Ate_30 ++;
+                if( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $outros_Ate30 ++;
 
-                            } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $de_4_A_6_SM_De_30_A_50 ++;
+                            $outros_30_A_50 ++;
 
-                                    } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $tipoConvenio == "d" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $de_4_A_6_SM_De_50_A_65 ++;
+                                    $outros_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $de_4_A_6_SM_Acima_65 ++;    
-                    }
+                                            $outros_Acima_65 ++;    
+                }
 
-                    if( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $acima_6_SM_Ate_30 ++;
-        
-                            } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $acima_6_SM_De_30_A_50 ++;
+// @Aqui estou comparando a faixa salarial para cada faixa etária e atribuindo o valor á uma váriavel contadora.                 
+                if( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $ate_2_SM_Ate30 ++;
 
-                                    } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "c" ) ) {
+                        } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "b" ) ) {
 
-                                        $acima_6_SM_De_50_A_65 ++;
+                            $ate_2_SM_De_30_A_50 ++;
 
-                                            } else {
+                                } else if ( ( $faixaSalarial == "a" ) && ( $faixaEtaria == "c" ) ) {
 
-                                                $acima_6_SM_Acima_65 ++;    
-                    }
+                                    $ate_2_SM_De_50_A_65 ++;
+
+                                        } else {
+
+                                            $ate_2_SM_Acima_65 ++;    
+                }
+
+                if( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $de_2_A_4_SM_Ate_30 ++;
+
+                        } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $de_2_A_4_SM_De_30_A_50 ++;
+
+                                } else if ( ( $faixaSalarial == "b" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $de_2_A_4_SM_De_50_A_65 ++;
+
+                                        } else {
+
+                                            $de_2_A_4_SM_Acima_65 ++;    
+                }
+
+                if( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $de_4_A_6_SM_Ate_30 ++;
+
+                        } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $de_4_A_6_SM_De_30_A_50 ++;
+
+                                } else if ( ( $faixaSalarial == "c" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $de_4_A_6_SM_De_50_A_65 ++;
+
+                                        } else {
+
+                                            $de_4_A_6_SM_Acima_65 ++;    
+                }
+
+                if( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $acima_6_SM_Ate_30 ++;
+    
+                        } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "b" ) ) {
+
+                            $acima_6_SM_De_30_A_50 ++;
+
+                                } else if ( ( $faixaSalarial == "d" ) && ( $faixaEtaria == "c" ) ) {
+
+                                    $acima_6_SM_De_50_A_65 ++;
+
+                                        } else {
+
+                                            $acima_6_SM_Acima_65 ++;    
+                }
 
 // @Aqui estou comparando o MOTIVO DO EMPRÉSTIMO para cada faixa etária e atribuindo o valor á uma váriavel contadora.
-                    if( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $pagar_Conta_Ate30 ++;
+                if( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $pagar_Conta_Ate30 ++;
 
-                            } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $pagar_Conta_De_30_A_50 ++;
+                            $pagar_Conta_De_30_A_50 ++;
 
-                                    } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $motEmprestimo == "a" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $pagar_Conta_De_50_A_65 ++;
+                                    $pagar_Conta_De_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $pagar_Conta_Acima_65 ++;    
-                    }
+                                            $pagar_Conta_Acima_65 ++;    
+                }
 
-                    if( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $reforma_Casa_Ate_30 ++;
+                if( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $reforma_Casa_Ate_30 ++;
 
-                            } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $reforma_Casa_De_30_A_50 ++;
+                            $reforma_Casa_De_30_A_50 ++;
 
-                                    } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $motEmprestimo == "b" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $reforma_Casa_De_50_A_65 ++;
+                                    $reforma_Casa_De_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $reforma_Casa_Acima_65 ++;    
-                    }
+                                            $reforma_Casa_Acima_65 ++;    
+                }
 
-                    if( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $Aq_Veiculo_Ate_30 ++;
+                if( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $Aq_Veiculo_Ate_30 ++;
 
-                            } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $Aq_Veiculo_De_30_A_50 ++;
+                            $Aq_Veiculo_De_30_A_50 ++;
 
-                                    } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $motEmprestimo == "c" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $Aq_Veiculo_De_50_A_65 ++;
+                                    $Aq_Veiculo_De_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $Aq_Veiculo_Acima_65 ++;    
-                    }
+                                            $Aq_Veiculo_Acima_65 ++;    
+                }
 
-                    if( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "a" ) ) {
-                                            
-                        $outro_Mot_Emp_Ate_30 ++;
+                if( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "a" ) ) {
+                                        
+                    $outro_Mot_Emp_Ate_30 ++;
 
-                            } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "b" ) ) {
+                        } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "b" ) ) {
 
-                                $outro_Mot_Emp_De_30_A_50 ++;
+                            $outro_Mot_Emp_De_30_A_50 ++;
 
-                                    } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "c" ) ) {
+                                } else if ( ( $motEmprestimo == "d" ) && ( $faixaEtaria == "c" ) ) {
 
-                                        $outro_Mot_Emp_De_50_A_65 ++;
+                                    $outro_Mot_Emp_De_50_A_65 ++;
 
-                                            } else {
+                                        } else {
 
-                                                $outro_Mot_Emp_Acima_65 ++;    
-                    }
+                                            $outro_Mot_Emp_Acima_65 ++;    
+                }
 
 
         }

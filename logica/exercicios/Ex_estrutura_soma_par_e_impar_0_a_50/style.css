@@ -1,0 +1,16 @@
+body {
+    background-color: powderblue;
+  }
+
+  form {
+    color:#FF8C00;
+    font-size: 200%;
+    border:3px solid #A020F0;
+    padding: 5px;
+    text-align: center;
+    background: #00CDCD;
+    width: 400px; 
+    margin: auto;
+    top: auto;
+    left: auto;
+  }

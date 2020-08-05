@@ -28,7 +28,7 @@ $idade = idade($anoNasc); // @Atribuindo a variavel $idade o resultado retornado
 
                 echo "Nome: " . $nome . "</br>";
                 echo "Sexo: " . $sexo . "</br>";
-                echo  "Idade: ". $idade. "</br>";
+                echo  "Idade: " . $idade. "</br>";
                 echo "Cabelo: " . $corCabelo . "</br></br>";
                 
 // @Inserindo os dados informados pelo usuário no meu BD

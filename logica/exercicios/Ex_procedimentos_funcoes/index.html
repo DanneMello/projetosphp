@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Super contador:</title>
+</head>
+<body>
+    <div>
+
+        <form action="index.php" method="POST">
+            Nome: 
+                <input  type="text" name="nome" placeholder="digite seu nome aqui" required name=nome></br>
+            E-mail: 
+                <input type="email" name="e-mail" placeholder="digite seu e-mail aqui"></br>
+            Peso:
+                <input  type="number" name="peso" placeholder="digite seu peso"></br>
+
+
+                <label for="tipoSexo">Sexo: </label>
+                    <select name="tipoSexo" id="sexo">
+                        <optgroup label="O que você é?">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </optgroup>
+                </select>
+
+            </br>
+
+            <label for="anoNasc">Data de nascimento:</label>
+            <input type="date" id="anoNasc" name="anoNasc" ></br>
+
+                    <label for="corCabelo">Cabelo: </label>
+                        <select name="corCabelo" id="cabelo">
+                            <optgroup label="Dalee">
+                                <option value="preto">Preto</option>
+                                <option value="branco">Branco</option>
+                                <option value="ruivo">Ruivo</option>
+                                <option value="loiro">Loiro</option>
+                                <option value="outro">Outro</option>
+                            </optgroup>
+                        </select>
+                    <br><br>
+                    
+                    <input type="submit" name="enviar" value="Enviar">
+
+                  </form>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>

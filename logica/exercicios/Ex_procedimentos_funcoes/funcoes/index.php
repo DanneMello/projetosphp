@@ -68,9 +68,9 @@ return $soma;
 
 
 
-echo "Maior valor informado é: ".maiorValor($valor1, $valor2, $valor2);
+echo "Maior valor informado é: ".maiorValor($valor1, $valor2, $valor3);
     echo "</br>";
-        echo "Menor valor informado é: ".menorValor($valor1, $valor2, $valor2);
+        echo "Menor valor informado é: ".menorValor($valor1, $valor2, $valor3);
             echo "</br>";
                 echo "A soma de todos os valores é : ". somaValores($valor1, $valor2, $valor3);
                     echo "</br>";

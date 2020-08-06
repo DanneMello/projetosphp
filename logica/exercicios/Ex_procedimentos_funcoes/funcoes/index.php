@@ -8,28 +8,28 @@ $valor3 = $_POST["valor3"];
 function maiorValor($a, $b, $c) {
     $maiorValor = $a ;
 
-    if ($maiorValor < $b) {
-        $maiorValor = $b ;
-    }
-
-        if ($maiorValor < $c) {
-            $maiorValor = $c ;
+        if ($maiorValor < $b) {
+            $maiorValor = $b ;
         }
-return $maiorValor;
+
+            if ($maiorValor < $c) {
+                $maiorValor = $c ;
+            }
+    return $maiorValor;
 }
 
 // @Função para pegar o menor valor
 function menorValor($a, $b, $c) {
     $menorValor = $a;
 
-    if($menorValor > $b) {
-        $menorValor = $b;
-    }
-
-        if ($menorValor > $c) {
-            $menorValor = $c;
+        if($menorValor > $b) {
+            $menorValor = $b;
         }
-return $menorValor;
+
+            if ($menorValor > $c) {
+                $menorValor = $c;
+            }
+    return $menorValor;
 }
 
 // @Função para verificar se os números informados pelo usuário é par ou impar
@@ -38,26 +38,25 @@ function numParImpar ($a, $b, $c) {
     $v2 =0;
     $v3 =0;
 
-    if (($a % 2) == 0) {
-    echo "Valor $a é um número par </br>";
+        if (($a % 2) == 0) {
+        echo "Valor $a é um número par </br>";
 
-    } else {
-        echo "Valor $a é impar: </br>";
-        }
+        } else {
+            echo "Valor $a é impar: </br>";
+            }
 
-            if (($b % 2) == 0) {
-            echo "Valor $b é um número par </br>"; 
+                if (($b % 2) == 0) {
+                echo "Valor $b é um número par </br>"; 
 
-            } else {
-                echo "Valor $b é impar: </br>";
-                }
+                } else {
+                    echo "Valor $b é impar: </br>";
+                    }
 
-                    if (($c % 2) == 0) {
-                    echo "Valor $c é um número par </br>";   
-                    } else {
-                        echo "Valor $c é impar: </br>";
-                        }
-
+                        if (($c % 2) == 0) {
+                        echo "Valor $c é um número par </br>";   
+                        } else {
+                            echo "Valor $c é impar: </br>";
+                            }
 }
 
 

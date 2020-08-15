@@ -3,6 +3,7 @@ require_once "conexao.php"; // @Chamando o arquivo responsável pela conexão co
 
 $banco = new Banco("localhost", "produtos", "root", "");
 
+
 $banco->query("SELECT * FROM tb_categoria_produto ");
 
 if ($banco->numRows() > 0){ // @Caso não retorne nenhum resultado do DB, o programa não executará esse trecho de código
@@ -17,6 +18,8 @@ if ($banco->numRows() > 0){ // @Caso não retorne nenhum resultado do DB, o prog
     echo "Sem resultado no DB";
 }
 
+
+/*
 $banco->insert("tb_categoria_produto", array( // @Inserindo dados 
     "id_categoria_planejamento" =>'',
     "nome_categoria" => 'esporte',
@@ -24,5 +27,10 @@ $banco->insert("tb_categoria_produto", array( // @Inserindo dados
 ));
 
 echo "Inserido com sucesso! ";
+*/
+// @Atualizando dados do DB e especificando o 3° parâmetro (No caso estou passando o id_categoria_planejamento" =>'5') 
+$banco->update("tb_categoria_produto", 
+    array("nome_categoria"=>'animal'), 
+    array("id_categoria_planejamento"=>'3'));
 
 ?>

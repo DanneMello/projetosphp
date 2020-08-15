@@ -28,17 +28,38 @@ class Banco {   // @Criando classe banco (CRUD) que será responsável por efetu
     }
 
     public function insert($table, $data) { // @Aqui estou criando o método insert
-        if( !empty($table) && ( is_array($data) && count($data) > 0 ) ) { // @Fazendo uma verificação dupla se a tabela foi preenchida e se $data é uma array e se tem algo nela
+        if( !empty($table) && ( is_array($data) && count($data) > 0 ) ) { // @Verificando se a tabela foi preenchida, se $data é um array e se tem algo nela.
             $sql = "INSERT INTO " .$table. " SET "; // @Montando minha query       
             $dados = array(); // @Criei uma variavel auxiliar 'array' 
-            foreach($data as $chave => $valor) { // @Foreach para pegar cada campo da minha tabela
+            foreach($data as $chave => $valor) { // @Foreach para pegar cada campo da minha tabela que vão ser alterados
                 $dados[] = $chave." = '".addslashes($valor)."'"; // @Aqui estou usando o addslashes só para não dar problema com as aspas simples, feito isso terei um array com todo os campos que irão ser inserido 
             }
             $sql = $sql.implode(", ", $dados); // @Implode concatenando com minha extrutura inicial
             $this->pdo->query($sql); // @Executando meu insert
-
         }
+    }
 
+    public function update($table, $data, $where= array(), $where_cond = "AND") { // @Caso o usuário não especifique onde será alterado os dados na tabela, o 3° parâmetro será definido como um array eo 4° parâmetro como um 'AND'
+
+        if(!empty($table) && ( is_array($data) && count($data) > 0 ) && is_array($where) ) {  // @Verificando se a tabela foi preenchida, se $data é uma array, se tem algo nela e se $where é um array
+            $sql = "UPDATE " .$table. " SET ";
+            $dados = array(); // @Criei uma variavel auxiliar 'array' 
+            foreach($data as $chave => $valor) { // @Foreach para pegar cada campo da minha tabela que serão alterados
+                $dados[] = $chave." = '".addslashes($valor)."'"; // @Aqui estou usando o addslashes só para não dar problema com as aspas simples, feito isso terei um array com todo os campos que irão ser inserido 
+            }
+            $sql = $sql.implode(", ", $dados); // @Implode concatenando com minha extrutura inicial
+
+            if(count($where) > 0) { // @Verificando se há campos especificado que será feito o update
+        
+                $dados = array(); // @Posso usar o mesmo $dados, pois ele já foi zerado
+                foreach($where as $chave => $valor) {
+                    $dados[] = $chave." = '".addslashes($valor)."'"; 
+                }
+                $sql = $sql." WHERE ".implode(" ".$where_cond." ", $dados); 
+            }
+
+            $this->pdo->query($sql); // @Executando minha query
+        }
     }
 }
 

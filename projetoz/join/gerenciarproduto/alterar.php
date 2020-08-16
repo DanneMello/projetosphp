@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';     // @Chamando o arquivo responsável pela conexão com o DB
+require_once '../conexao.php';    // @Chamando o arquivo responsável pela conexão com o DB
 $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando a classe 'Banco' 
 
 $id_produto = 0;        // @Definindo id_produto com valor 0

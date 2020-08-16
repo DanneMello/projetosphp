@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';     // @Chamando o arquivo conexão
+require_once '../conexao.php';     // @Chamando o arquivo conexão
 $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
 
 $banco->query("SELECT * FROM tb_produto ");

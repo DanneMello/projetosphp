@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';
+require_once '../conexao.php';
 $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
 
 

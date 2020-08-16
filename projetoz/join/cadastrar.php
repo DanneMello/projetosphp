@@ -51,9 +51,5 @@ if(isset($_POST['idProduto']) && empty($_POST['idProduto']) == false &&
 
     header("Location: index.php"); // @Depois de inserido um novo produto, o usuário será redirecionado para a página inicial
 
-} else{
-    echo "Insira os dados para continuar:";
 }
-
-
 ?>

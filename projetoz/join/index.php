@@ -23,7 +23,7 @@ echo '
 
 if ($banco->numRows() > 0){     // @Caso não retorne nenhum resultado do DB, o programa não executará esse trecho de código
 
-    foreach($banco->result() as $tb_produto) {        // @Aqui estou usando um foreach para percorrer toda minha array 
+    foreach($banco->result() as $tb_produto) {        // @Aqui estou usando um foreach para percorrer toda minha array e printar em forma de tabela os valores
         echo "<table border='0' width='100%'> <tr>";
         echo "<td> ". $tb_produto['id_produto']. "</td>";
         echo "<td> " . $tb_produto['id_categoria_produto'] . "</td>";

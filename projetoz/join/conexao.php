@@ -1,4 +1,13 @@
 <?php
+/*
+* Classe responsável pela conexão com o banco de dados.
+*
+* Esta classe é responsável por fazer todas as alterações que envolve o banco de dados. Criei uma extrutura que poderá ser utilizada em outros arquivos, bastando apenas instanciar ela e montar as query
+*
+* @package Gerenciador de produdos
+*
+* @author Daniel Melo <melo.daniel00@gmail.com>
+*/
 class Banco {       // @Criando classe banco (CRUD) que será responsável por efetuar a conexão com o DB
     private $pdo;       // @Criando uma variável privada para guardar a conexão com o DB
     private $numRows;
@@ -19,8 +28,8 @@ class Banco {       // @Criando classe banco (CRUD) que será responsável por e
         $this->array = $query->fetchAll();      // @Como não sei quantos itens vai retornar da minha consulta, estou usando o fetchAll que retornará todos os itens para minha array
     }
 
-    public function result() {
-        return $this->array;        // @Aqui o método result está retornando a array
+    public function result() {  // @Aqui o método result está retornando um array
+        return $this->array;        
     }
 
     public function numRows() {
@@ -32,7 +41,7 @@ class Banco {       // @Criando classe banco (CRUD) que será responsável por e
             $sql = "INSERT INTO " .$table. " SET ";     // @Montando minha query       
             $dados = array();       // @Criei uma variavel auxiliar 'array' 
             foreach($data as $chave => $valor) {        // @Foreach para pegar cada campo da minha tabela que vão ser alterados
-                $dados[] = $chave." = '".addslashes($valor)."'";        // @Aqui estou usando o addslashes só para não dar problema com as aspas simples, feito isso terei um array com todo os campos que irão ser inserido 
+                $dados[] = $chave." = '".addslashes($valor)."'";        // @Aqui estou usando o addslashes para não dar problema com as aspas simples, feito isso terei um array com todo os campos que irão ser inserido 
             }
             $sql = $sql.implode(", ", $dados);      // @Implode concatenando com minha extrutura inicial
             $this->pdo->query($sql);        // @Executando meu insert
@@ -59,7 +68,7 @@ class Banco {       // @Criando classe banco (CRUD) que será responsável por e
         }
     }
 
-    public function delete($table, $where, $where_cond = "AND") {
+    public function delete($table, $where, $where_cond = "AND") {       // @Metodo delete responsável por deletar os dados 
         if( !empty($table) && ( is_array($where) && count($where) > 0 ) ) {
             $sql = "DELETE FROM ".$table;
 

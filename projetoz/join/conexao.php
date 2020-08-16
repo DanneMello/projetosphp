@@ -7,7 +7,7 @@ class Banco {       // @Criando classe banco (CRUD) que será responsável por e
     public function __construct($host, $dbname, $dbuser, $dbpass) {     // @Criando um método publico onde irei fazer a conexão com o DB
         try {
             $this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$host, $dbuser, $dbpass);     // @Criando um construtor 'CRUD' de mySql dentro do try catch                
-            echo "Conexão com o DB Ok!</br></br>";
+            echo "Conectado ao banco \o/ </br></br>";
         } catch(PDOException $e) {
             echo "Falhou a conexão".$e->getMessage();
         }

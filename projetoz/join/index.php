@@ -1,7 +1,7 @@
 <?php
 require_once "conexao.php";     // @Chamando o arquivo responsável pela conexão com o DB
 
-$banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
+$banco = new Banco("localhost", "produtos", "root", "");        // @Instânciando minha classe Banco
 
 $banco->query("SELECT * FROM tb_categoria_produto ");
 

@@ -3,11 +3,11 @@ require_once 'conexao.php';
 $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
 
 $banco->query("SELECT * FROM tb_produto ");
-echo "
-<a href='cadastrar.php'>Adicionar novo produto </a></br>
-<a href='listar.php'>Listar produtos </a></br></br>
+echo '
+<a href="cadastrar.php">Adicionar novo produto </a></br>
+<a href="listar.php">Listar produtos </a></br></br>
 
-<table border='0' width='100%'>
+<table border="0" width="100%">
     <tr>
         <th> Id do produto:</th>
         <th> Id da categoria:</th>
@@ -19,7 +19,7 @@ echo "
     </tr>
 
 </table> 
-";
+';
 
 if ($banco->numRows() > 0){     // @Caso não retorne nenhum resultado do DB, o programa não executará esse trecho de código
 
@@ -31,11 +31,11 @@ if ($banco->numRows() > 0){     // @Caso não retorne nenhum resultado do DB, o 
         echo "<td> " . $tb_produto['nome_produto'] . "</td>";
         echo "<td> " . $tb_produto['valor_produto'] . "</td>";
 
-        echo "<td><a href='alterar.php?id_produto='". $tb_produto['id_produto']."'>Alterar</a>-
+        echo '<td> <a href="alterar.php?id_produto='.$tb_produto['id_produto']. '"> Alterar </a>-
                 
-                <a href='excluir.php?id_produto='". $tb_produto['id_produto']. "'>Excluir</a>-
+                <a href="excluir.php?id_produto='.$tb_produto['id_produto']. '"> Excluir </a>-
               
-              </td>";
+              </td> ';
 
         echo " </tr> </table>";
     }

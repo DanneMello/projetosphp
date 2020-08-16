@@ -40,8 +40,6 @@ if(isset($_POST['idProduto']) && empty($_POST['idProduto']) == false &&
     $nomeProduto = addslashes($_POST['nomeProduto']);
     $valorProduto = addslashes($_POST['valorProduto']);
 
-    echo "Id do produto: $idProduto </br>Id da categoria: $idCategoriaProduto </br>Data: $dataCadastro </br>Produto: $nomeProduto </br> Valor: $valorProduto  ";
-
 // @Inserindo dados informados pelo usuário no DB
     $banco->insert("tb_produto", array( 
         "id_produto" =>$idProduto,
@@ -50,9 +48,8 @@ if(isset($_POST['idProduto']) && empty($_POST['idProduto']) == false &&
         "nome_produto" => $nomeProduto,
         "valor_produto" => $valorProduto
     ));
-    
-    echo "Inserido com sucesso! ";
 
+    header("Location: index.php"); // @Depois de inserido um novo produto, o usuário será redirecionado para a página inicial
 
 } else{
     echo "Insira os dados para continuar:";

@@ -1,41 +1,47 @@
 <?php
-require_once "conexao.php";     // @Chamando o arquivo responsável pela conexão com o DB
+require_once 'conexao.php';
+$banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
 
-$banco = new Banco("localhost", "produtos", "root", "");        // @Instânciando minha classe Banco
+$banco->query("SELECT * FROM tb_produto ");
+echo "
+<a href='cadastrar.php'>Adicionar novo produto </a></br>
+<a href='listar.php'>Listar produtos </a></br></br>
 
-$banco->query("SELECT * FROM tb_categoria_produto ");
+<table border='0' width='100%'>
+    <tr>
+        <th> Id do produto:</th>
+        <th> Id da categoria:</th>
+        <th>Data cadastrado:</th>
+        <th>Nome do prduto:</th>
+        <th>Valor do produto:</th>
+        <th>Gerenciar produtos:</th>
+
+    </tr>
+
+</table> 
+";
 
 if ($banco->numRows() > 0){     // @Caso não retorne nenhum resultado do DB, o programa não executará esse trecho de código
 
-    foreach($banco->result() as $tb_categoria_produto) {        // @Aqui estou usando um foreach para percorrer toda minha array 
+    foreach($banco->result() as $tb_produto) {        // @Aqui estou usando um foreach para percorrer toda minha array 
+        echo "<table border='0' width='100%'> <tr>";
+        echo "<td> ". $tb_produto['id_produto']. "</td>";
+        echo "<td> " . $tb_produto['id_categoria_produto'] . "</td>";
+        echo "<td> ". $tb_produto['data_cadastro']. "</td>";
+        echo "<td> " . $tb_produto['nome_produto'] . "</td>";
+        echo "<td> " . $tb_produto['valor_produto'] . "</td>";
 
-        echo "ID: ". $tb_categoria_produto['id_categoria_planejamento']. "</br>";
-        echo "Categoria: " . $tb_categoria_produto['nome_categoria'] . "</br>";
-        echo "Código do produto: ". $tb_categoria_produto['PK_tb_categoria_produto']. "<hr/>";
+        echo "<td><a href='alterar.php?id_produto='". $tb_produto['id_produto']."'>Alterar</a>-
+                
+                <a href='excluir.php?id_produto='". $tb_produto['id_produto']. "'>Excluir</a>-
+              
+              </td>";
+
+        echo " </tr> </table>";
     }
 
 } else {
     echo "Sem resultado no DB";
 }
-
-/*
-$banco->insert("tb_categoria_produto", array(       // @Inserindo dados 
-    "id_categoria_planejamento" =>'',
-    "nome_categoria" => 'esporte',
-    "PK_tb_categoria_produto" => '3'
-));
-
-echo "Inserido com sucesso! ";
-*/
- 
-/*
-// @Atualizando dados do DB e especificando o 3° parâmetro (No caso estou passando o id_categoria_planejamento" =>'5') 
-$banco->update("tb_categoria_produto", 
-    array("nome_categoria"=>'animal'), 
-    array("id_categoria_planejamento"=>'3'));
-
-*/
-
-$banco->delete("tb_categoria_produto", array("id_categoria_planejamento"=>'6') );
 
 ?>

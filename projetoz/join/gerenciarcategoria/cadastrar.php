@@ -31,7 +31,7 @@ if(isset($_POST['idCategoria']) && empty($_POST['idCategoria']) == false &&
         "nome_categoria" => $nomeCategoria,
     ));
 
-    header("Location: index.php"); // @Depois de inserido um novo produto, o usuário será redirecionado para a página inicial
+    header("Location: index.php"); // @Depois de inserido uma nova categoria, o usuário será redirecionado para a página inicial
 
 }
 ?>

@@ -4,8 +4,10 @@ $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando
 
 $banco->query("SELECT * FROM tb_categoria_produto ");
 echo '
+<a href="../index.html">Página inicial </a></br></br>
 <a href="cadastrar.php">Adicionar nova categoria </a></br>
 <a href="listar.php">Listar categorias </a></br></br>
+
 
 <table border="0" width="100%">
     <tr>

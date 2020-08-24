@@ -4,6 +4,7 @@ $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando
 
 $banco->query("SELECT * FROM tb_produto ");
 echo '
+<a href="../index.html">Página inicial </a></br></br>
 <a href="cadastrar.php">Adicionar novo produto </a></br>
 <a href="listar.php">Listar produtos </a></br></br>
 

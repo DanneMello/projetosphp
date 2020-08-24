@@ -4,7 +4,7 @@ $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando
 
 $idCategoria = 0;        // @Definindo id_categoria com valor 0
 
-// @Verificação de segurança para verificar se o categoria que o usuário quer alterar existe no DB
+// @Verificação de segurança para verificar se a categoria que o usuário quer alterar existe no DB
 if(isset($_GET['id_categoria_planejamento']) && empty($_GET['id_categoria_planejamento']) == false) {  
     $idCategoria  = addslashes($_GET['id_categoria_planejamento']);     
 
@@ -25,11 +25,11 @@ if(isset($_GET['id_categoria_planejamento']) && empty($_GET['id_categoria_planej
 
         }
 
-// @Selecionando o categoria do banco para ser alterado
+// @Selecionando a categoria do banco para ser alterado
         $banco->query("SELECT * FROM tb_categoria_produto WHERE id_categoria_planejamento = $idCategoria ");
         if ($banco->numRows() > 0){     // @Caso exista mais de um registro com o informado, será executao um foreach para montar minha query
 
-            foreach($banco->result() as $tb_categoria) {      // @Montando um array $id_categori onde armazenará os dados do categoria informado pelo usuário
+            foreach($banco->result() as $tb_categoria) {      // @Montando um array $id_categori onde armazenará os dados da categoria informado pelo usuário
              }
         } 
 

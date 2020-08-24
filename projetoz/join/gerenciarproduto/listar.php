@@ -3,7 +3,7 @@ require_once '../conexao.php';     // @Chamando o arquivo conexão
 $banco = new Banco("localhost", "produtos", "root", "");        // @Instanciando minha classe Banco
 
 $banco->query("SELECT * FROM tb_produto ");
-echo'<a href="index.php">Página inicial </a></br></br>';        //@Voltar para a página inicial
+echo'<a href="../index.html">Página inicial </a></br></br>';        //@Voltar para a página inicial
 
 
 if ($banco->numRows() > 0){     // @Caso não retorne nenhum resultado do DB, o programa não executará esse trecho de código

@@ -417,90 +417,90 @@ include_once("conexao.php");
 
 /*Motivo do empréstimo */
         $pagar_Conta_Ate30 = ($pagar_Conta_Ate30 / $total) * 100;
-            $pagar_Conta_De_30_A_50 = ($pagar_Conta_De_30_A_50 / $total) * 100;
-                $pagar_Conta_De_50_A_65 = ($pagar_Conta_De_50_A_65 / $total) * 100;
-                    $pagar_Conta_Acima_65 = ($pagar_Conta_Acima_65 / $total) * 100;
+        $pagar_Conta_De_30_A_50 = ($pagar_Conta_De_30_A_50 / $total) * 100;
+        $pagar_Conta_De_50_A_65 = ($pagar_Conta_De_50_A_65 / $total) * 100;
+        $pagar_Conta_Acima_65 = ($pagar_Conta_Acima_65 / $total) * 100;
 
         $reforma_Casa_Ate_30 = ($reforma_Casa_Ate_30 / $total) * 100;
-            $reforma_Casa_De_30_A_50 = ($reforma_Casa_De_30_A_50 / $total) * 100;
-                $reforma_Casa_De_50_A_65 = ($reforma_Casa_De_50_A_65 / $total) * 100;
-                    $reforma_Casa_Acima_65 = ($reforma_Casa_Acima_65 / $total) * 100;
+        $reforma_Casa_De_30_A_50 = ($reforma_Casa_De_30_A_50 / $total) * 100;
+        $reforma_Casa_De_50_A_65 = ($reforma_Casa_De_50_A_65 / $total) * 100;
+        $reforma_Casa_Acima_65 = ($reforma_Casa_Acima_65 / $total) * 100;
 
         $Aq_Veiculo_Ate_30 = ($Aq_Veiculo_Ate_30  / $total) * 100;
-            $Aq_Veiculo_De_30_A_50 = ($Aq_Veiculo_De_30_A_50 / $total) * 100;
-                $Aq_Veiculo_De_50_A_65 = ($Aq_Veiculo_De_50_A_65 / $total) * 100;
-                    $Aq_Veiculo_Acima_65 = ($Aq_Veiculo_Acima_65  / $total) * 100;
+        $Aq_Veiculo_De_30_A_50 = ($Aq_Veiculo_De_30_A_50 / $total) * 100;
+        $Aq_Veiculo_De_50_A_65 = ($Aq_Veiculo_De_50_A_65 / $total) * 100;
+        $Aq_Veiculo_Acima_65 = ($Aq_Veiculo_Acima_65  / $total) * 100;
 
         $outro_Mot_Emp_Ate_30 = ($outro_Mot_Emp_Ate_30 / $total) * 100;
-            $outro_Mot_Emp_De_30_A_50 = ($outro_Mot_Emp_De_30_A_50 / $total) * 100;
-                $outro_Mot_Emp_De_50_A_65 = ($outro_Mot_Emp_De_50_A_65 / $total) * 100;
-                    $outro_Mot_Emp_Acima_65 = ($outro_Mot_Emp_Acima_65 / $total) * 100;
+        $outro_Mot_Emp_De_30_A_50 = ($outro_Mot_Emp_De_30_A_50 / $total) * 100;
+        $outro_Mot_Emp_De_50_A_65 = ($outro_Mot_Emp_De_50_A_65 / $total) * 100;
+        $outro_Mot_Emp_Acima_65 = ($outro_Mot_Emp_Acima_65 / $total) * 100;
 
 /*Faixa salarial*/
         $ate_2_SM_Ate30 = ($ate_2_SM_Ate30 / $total) * 100;
-            $ate_2_SM_De_30_A_50 = ($ate_2_SM_De_30_A_50 / $total) * 100;
-                $ate_2_SM_De_50_A_65 = ($ate_2_SM_De_50_A_65 / $total) * 100;
-                    $ate_2_SM_Acima_65 = ($ate_2_SM_Acima_65 / $total) * 100;
+        $ate_2_SM_De_30_A_50 = ($ate_2_SM_De_30_A_50 / $total) * 100;
+        $ate_2_SM_De_50_A_65 = ($ate_2_SM_De_50_A_65 / $total) * 100;
+        $ate_2_SM_Acima_65 = ($ate_2_SM_Acima_65 / $total) * 100;
 
         $de_2_A_4_SM_Ate_30 = ($de_2_A_4_SM_Ate_30 / $total) * 100;
-            $de_2_A_4_SM_De_30_A_50 = ($de_2_A_4_SM_De_30_A_50 / $total) * 100;
-                $de_2_A_4_SM_De_50_A_65 = ($de_2_A_4_SM_De_50_A_65 / $total) * 100;
-                    $de_2_A_4_SM_Acima_65 = ($de_2_A_4_SM_Acima_65 / $total) * 100;
+        $de_2_A_4_SM_De_30_A_50 = ($de_2_A_4_SM_De_30_A_50 / $total) * 100;
+        $de_2_A_4_SM_De_50_A_65 = ($de_2_A_4_SM_De_50_A_65 / $total) * 100;
+        $de_2_A_4_SM_Acima_65 = ($de_2_A_4_SM_Acima_65 / $total) * 100;
 
         $de_4_A_6_SM_Ate_30 = ($de_4_A_6_SM_Ate_30 / $total) * 100;
-            $de_4_A_6_SM_De_30_A_50 = ($de_4_A_6_SM_De_30_A_50 / $total) * 100;
-                $de_4_A_6_SM_De_50_A_65 = ($de_4_A_6_SM_De_50_A_65 / $total) * 100;
-                    $de_4_A_6_SM_Acima_65 = ($de_4_A_6_SM_Acima_65 / $total) * 100;
+        $de_4_A_6_SM_De_30_A_50 = ($de_4_A_6_SM_De_30_A_50 / $total) * 100;
+        $de_4_A_6_SM_De_50_A_65 = ($de_4_A_6_SM_De_50_A_65 / $total) * 100;
+        $de_4_A_6_SM_Acima_65 = ($de_4_A_6_SM_Acima_65 / $total) * 100;
                 
         $acima_6_SM_Ate_30 = ($acima_6_SM_Ate_30 / $total) * 100;
-            $acima_6_SM_De_30_A_50 = ($acima_6_SM_De_30_A_50 / $total) * 100;
-                $acima_6_SM_De_50_A_65 = ($acima_6_SM_De_50_A_65 / $total) * 100;
-                    $acima_6_SM_Acima_65 = ($acima_6_SM_Acima_65 / $total) * 100;
+        $acima_6_SM_De_30_A_50 = ($acima_6_SM_De_30_A_50 / $total) * 100;
+        $acima_6_SM_De_50_A_65 = ($acima_6_SM_De_50_A_65 / $total) * 100;
+        $acima_6_SM_Acima_65 = ($acima_6_SM_Acima_65 / $total) * 100;
 
 /*Tipo do convênio*/ 
         $inss_Ate30 = ($inss_Ate30 / $total) * 100;
-            $inss_30_A_50 = ($inss_30_A_50 / $total) * 100;
-                $inss_50_A_65 = ($inss_50_A_65 / $total) * 100;
-                    $inss_Acima_65 = ($inss_Acima_65 / $total) * 100;
+        $inss_30_A_50 = ($inss_30_A_50 / $total) * 100;
+        $inss_50_A_65 = ($inss_50_A_65 / $total) * 100;
+        $inss_Acima_65 = ($inss_Acima_65 / $total) * 100;
 
         $siape_Ate30 = ($siape_Ate30 / $total) * 100;
-            $siape_30_A_50 = ($siape_30_A_50 / $total) * 100;
-                $siape_50_A_65 = ($siape_50_A_65 / $total) * 100;
-                    $siape_Acima_65 = ($siape_Acima_65 / $total) * 100;
+        $siape_30_A_50 = ($siape_30_A_50 / $total) * 100;
+        $siape_50_A_65 = ($siape_50_A_65 / $total) * 100;
+        $siape_Acima_65 = ($siape_Acima_65 / $total) * 100;
 
         $FA_Ate30 = ($FA_Ate30 / $total) * 100;
-            $FA_30_A_50 = ($FA_30_A_50 / $total) * 100;
-                $FA_50_A_65 = ($FA_50_A_65 / $total) * 100;
-                    $FA_Acima_65 = ($FA_Acima_65 / $total) * 100;
+        $FA_30_A_50 = ($FA_30_A_50 / $total) * 100;
+        $FA_50_A_65 = ($FA_50_A_65 / $total) * 100;
+        $FA_Acima_65 = ($FA_Acima_65 / $total) * 100;
 
         $outros_Ate30 = ($outros_Ate30 / $total) * 100;
-            $outros_30_A_50 = ($outros_30_A_50 / $total) * 100;
-                $outros_50_A_65 = ($outros_50_A_65 / $total) * 100;
-                    $outros_Acima_65 = ($outros_Acima_65 / $total) * 100;
+        $outros_30_A_50 = ($outros_30_A_50 / $total) * 100;
+        $outros_50_A_65 = ($outros_50_A_65 / $total) * 100;
+        $outros_Acima_65 = ($outros_Acima_65 / $total) * 100;
 
 // @Aplicando a regra de 3 para mostrar a porcentagem obtida da pesquisa e formatando as casas decimais.
         $Qt_FxE_A = ($Qt_FxE_A / $total) * 100;  // ATÉ 30
-            $Qt_FxE_B = ($Qt_FxE_B / $total) * 100;  // DE 30 A 50
-                $Qt_FxE_C = ($Qt_FxE_C / $total) * 100;  // DE 50 A 65
-                    $Qt_FxE_D = ($Qt_FxE_D / $total) * 100;  // ACIMA DE 65
+        $Qt_FxE_B = ($Qt_FxE_B / $total) * 100;  // DE 30 A 50
+        $Qt_FxE_C = ($Qt_FxE_C / $total) * 100;  // DE 50 A 65
+        $Qt_FxE_D = ($Qt_FxE_D / $total) * 100;  // ACIMA DE 65
                 
         $Qt_TiConv_A = ($Qt_TiConv_A / $total) * 100;  // INSS
-            $Qt_TiConv_B = ($Qt_TiConv_B / $total) * 100;  // SIAPE
-                $Qt_TiConv_C = ($Qt_TiConv_C / $total) * 100;  // FORÇAS ARMADAS
-                    $Qt_TiConv_D = ($Qt_TiConv_D / $total) * 100;  // OUTROS
+        $Qt_TiConv_B = ($Qt_TiConv_B / $total) * 100;  // SIAPE
+        $Qt_TiConv_C = ($Qt_TiConv_C / $total) * 100;  // FORÇAS ARMADAS
+        $Qt_TiConv_D = ($Qt_TiConv_D / $total) * 100;  // OUTROS
 
         $Qt_FxS_A = ($Qt_FxS_A / $total) * 100;  // ATÉ 2 SM
-            $Qt_FxS_B = ($Qt_FxS_B / $total) * 100;  // DE 2 A 4 SM
-                $Qt_FxS_C = ($Qt_FxS_C / $total) * 100;  // DE 4 A 6 SM
-                    $Qt_FxS_D = ($Qt_FxS_D / $total) * 100;  // ACIMA DE 6 SM
+        $Qt_FxS_B = ($Qt_FxS_B / $total) * 100;  // DE 2 A 4 SM
+        $Qt_FxS_C = ($Qt_FxS_C / $total) * 100;  // DE 4 A 6 SM
+        $Qt_FxS_D = ($Qt_FxS_D / $total) * 100;  // ACIMA DE 6 SM
 
         $Qt_MotEmp_A = ($Qt_MotEmp_A / $total) * 100;  // PAGAR CONTA
-            $Qt_MotEmp_B = ($Qt_MotEmp_B / $total) * 100;  // REFORMA CASA
-                $Qt_MotEmp_C = ($Qt_MotEmp_C / $total) * 100;  // AQUISIÇÃO VEÍCULO
-                    $Qt_MotEmp_D = ($Qt_MotEmp_D / $total) * 100;  // OUTROS
+        $Qt_MotEmp_B = ($Qt_MotEmp_B / $total) * 100;  // REFORMA CASA
+        $Qt_MotEmp_C = ($Qt_MotEmp_C / $total) * 100;  // AQUISIÇÃO VEÍCULO
+        $Qt_MotEmp_D = ($Qt_MotEmp_D / $total) * 100;  // OUTROS
             
             echo "
-                <table 
+	               <table 
                     width='1000' 
                     border='1px'  
                     style=' 
@@ -512,7 +512,7 @@ include_once("conexao.php");
                         margin-right: -50%;
                         transform: translate(-50%, -50%);               
                     ' >
-
+				
                     <tr bgcolor=' #00FF00'>
 
                         <td
@@ -522,7 +522,8 @@ include_once("conexao.php");
                                 text-align: center;
                                 font-size: 40px;
                             '>
-
+	
+					
                                 <b> RESULTADO DA PESQUISA </b>
                         </td>
 

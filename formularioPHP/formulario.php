@@ -1,16 +1,21 @@
 <?php
 
 // @Criando formulário HTML através do PHP
+echo "
+    <body style='background-color: #87CEEB; border-radius: 10px;'>
+    </body>
+";
+echo "<div style='text-align: center;'>";
 echo "<form method='POST' action='processo.php'>"; // @Aqui estou enviando meus dados através do método POST, para o arquivo "Formulário.php" que irá tratá-los
 echo "<h1>Pesquisa</h1>"; 
 echo "<article>";
 
 echo "<p>";
 echo "<label>1.Qual sua faixa etaria? </label><br/>";
-echo "<input type='radio' name='perg1' value='a' />a. Até 30 anos<br/>";
-echo "<input type='radio' name='perg1' value='b' />b. De 30 a 50 anos<br/>";
-echo "<input type='radio' name='perg1' value='c' />c. De 50 a 65 anos<br/>";
-echo "<input type='radio' name='perg1' value='d' />d. Acima de 65 anos<br/>";
+echo "<input style='text-align: center' type='radio' name='perg1' value='a' />a. Até 30 anos<br/>";
+echo "<input style='text-align: center' type='radio' name='perg1' value='b' />b. De 30 a 50 anos<br/>";
+echo "<input style='text-align: center' type='radio' name='perg1' value='c' />c. De 50 a 65 anos<br/>";
+echo "<input style='text-align: center' type='radio' name='perg1' value='d' />d. Acima de 65 anos<br/>";
 echo "</p>";
 
 echo "<p>";
@@ -41,4 +46,6 @@ echo "</article>";
 echo "<input type='submit' value='Enviar'>";
 echo "</form>";
  
+echo "</div>";
+
  ?>

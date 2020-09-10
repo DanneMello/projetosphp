@@ -499,13 +499,13 @@ include_once("conexao.php");
         $Qt_MotEmp_C = ($Qt_MotEmp_C / $total) * 100;  // AQUISIÇÃO VEÍCULO
         $Qt_MotEmp_D = ($Qt_MotEmp_D / $total) * 100;  // OUTROS
             
-            echo "
+            echo " <div  style=''>
 	               <table 
                     width='1000' 
                     border='1px'  
                     style=' 
                         margin:auto; 
-                        background: #1E90FF;
+                        background: #87CEEB;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -514,22 +514,17 @@ include_once("conexao.php");
                     ' >
 				
                     <tr bgcolor=' #00FF00'>
-
                         <td
                             height='40' 
                             COLSPAN='6'
                             style='
                                 text-align: center;
                                 font-size: 40px;
-                            '>
-	
-					
+                        '>					
                                 <b> RESULTADO DA PESQUISA </b>
                         </td>
-
                     </tr>
                 
-
                         <tr bgcolor='  #4F4F4F'>
                             <td 
                                 height='40'
@@ -538,15 +533,13 @@ include_once("conexao.php");
                                         text-align: center;
                                         font-size: 30px;
                                     '>
-
                                         <b> FAIXA ETÁRIA </b>
                             </td>
-
                         </tr>
 
                         <tr>
                             <td width='101' height='40'><b>TOTAL:</b></td>
-                                <td width='113' bgcolor=' #FF4500' style=' text-align: center; font-size: 35px;'> <b> " . $total . "</b></td>
+                                <td width='113' bgcolor=' #3bfdcc' style=' text-align: center; font-size: 35px;'> <b> " . $total . "</b></td>
                                     <td width='140' style=' text-align: center; font-size: 20px;'>ATÉ 30: " . number_format($Qt_FxE_A, 2) . "%</td>
                                         <td width='85'  style=' text-align: center; font-size: 20px;'>DE 30 A 50: " .number_format($Qt_FxE_B, 2). "%</td>
                                             <td width='140' style=' text-align: center; font-size: 20px;'>DE 50 A 65: ".number_format($Qt_FxE_C, 2)."%</td>
@@ -554,35 +547,33 @@ include_once("conexao.php");
                         </tr>
                 
                         <tr bgcolor=' #4F4F4F'>
-                        <td
-                            height='40'
-                            COLSPAN='6' 
-                            style='
-                                text-align: center; 
-                                font-size: 30px;
-                            '>
-
-                                <b> TIPO DO CONVÊNIO </b>
-                        </td>
-
+                            <td
+                                height='40'
+                                COLSPAN='6' 
+                                style='
+                                    text-align: center; 
+                                    font-size: 30px;
+                                '>
+                                    <b> TIPO DO CONVÊNIO </b>
+                            </td>
                         </tr>
                 
                         <tr>
                             <td><b>INSS</b></td>
-                            <td height='40'> ".number_format($Qt_TiConv_A, 2)."% </td>
-                                <td>".number_format($inss_Ate30, 2)."%</td>
-                                    <td>".number_format($inss_30_A_50, 2)."%</td>
-                                        <td>".number_format($inss_50_A_65, 2)."%</td>
-                                            <td> ".number_format($inss_Acima_65, 2)."%</td>               
+                                <td height='40'> ".number_format($Qt_TiConv_A, 2)."% </td>
+                                    <td>".number_format($inss_Ate30, 2)."%</td>
+                                        <td>".number_format($inss_30_A_50, 2)."%</td>
+                                            <td>".number_format($inss_50_A_65, 2)."%</td>
+                                                <td> ".number_format($inss_Acima_65, 2)."%</td>               
                         </tr>
                 
                         <tr>        
                             <td><b>SIAPE</b></td>
-                            <td height='40'> ".number_format($Qt_TiConv_B, 2)."% </td>
-                                <td> ".number_format($siape_Ate30, 2)."% </td>
-                                    <td> ".number_format($siape_30_A_50, 2)."% </td>
-                                        <td> ".number_format($siape_50_A_65, 2)."% </td>
-                                            <td> ".number_format($siape_Acima_65, 2)."% </td>                
+                                <td height='40'> ".number_format($Qt_TiConv_B, 2)."% </td>
+                                    <td> ".number_format($siape_Ate30, 2)."% </td>
+                                        <td> ".number_format($siape_30_A_50, 2)."% </td>
+                                            <td> ".number_format($siape_50_A_65, 2)."% </td>
+                                                <td> ".number_format($siape_Acima_65, 2)."% </td>                
                         </tr>
                 
                         <tr>        
@@ -610,13 +601,10 @@ include_once("conexao.php");
                                 style='
                                     text-align: center; 
                                     font-size: 30px;
-                                '>
-                            
+                                '>                            
                                     <b> FAIXA SALARIAL </b>
                             </td>
-
                         </tr>
-
 
                         <tr>
                             <td><b>ATÉ 2 SALÁRIOS MÍNIMOS</b></td>
@@ -655,18 +643,15 @@ include_once("conexao.php");
                         </tr>
                 
                         <tr bgcolor=' #4F4F4F'>
-
                             <td
                                 height='40'
                                 COLSPAN='6' 
                                 style=' 
                                     text-align: center; 
                                     font-size: 30px;
-                                '> 
-                                
+                                '>                                 
                                     <b> MOTIVO DO EMPRÉSTIMO </b> 
                             </td>
-
                         </tr>
 
                         <tr>
@@ -706,13 +691,9 @@ include_once("conexao.php");
                         </tr>
                        
                 </table>
-              
-        ";
-        
+              </div>
+        ";       
     }
-
 ?>
-
 </body>
-
 </html>
